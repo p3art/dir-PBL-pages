@@ -1,0 +1,1662 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>181-BOU-009</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2d9188db-8a4e-8118-b673-fe1ccc8ca57e" class="page sans"><header><h1 class="page-title" dir="auto">181-BOU-009</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="32b188db-8a4e-809f-a47c-d11909f2c7f1" class="">BOU 009 螭首為梯登金頂</p></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-81a6-a534-ed19a9d332de" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81b0-a76f-ef42386328df" class="image"><a href="181-BOU-009/%E5%9C%962-70x85cm-300dpi-%E5%8A%A0%E8%A3%BD%E4%BD%9C%E5%93%81%E5%90%8D%E7%A8%B1%E7%89%8C.png"><img style="width:709.984375px" src="181-BOU-009/%E5%9C%962-70x85cm-300dpi-%E5%8A%A0%E8%A3%BD%E4%BD%9C%E5%93%81%E5%90%8D%E7%A8%B1%E7%89%8C.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-814c-9045-dcd984455d3a" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-815a-b6d4-cd466841f01c" class="image"><a href="181-BOU-009/fig-A-color.png"><img style="width:9212px" src="181-BOU-009/fig-A-color.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-811e-a1e2-f7ac1f37d200" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8188-8915-fce6bd1cdeba" class="image"><a href="181-BOU-009/%E5%9C%964A-txt-BOU-009-patch-%E6%8C%96%E7%A9%BF%E7%A4%BA%E6%84%8F%E5%9C%96.png"><img style="width:273.9930725097656px" src="181-BOU-009/%E5%9C%964A-txt-BOU-009-patch-%E6%8C%96%E7%A9%BF%E7%A4%BA%E6%84%8F%E5%9C%96.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="2d9188db-8a4e-816a-8900-d5040f3f1870"/></div><div style="display:contents" dir="auto"><h2 id="2d9188db-8a4e-8121-91df-e64a224b4beb" class=""><mark class="highlight-blue">How to draw 1</mark></h2></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8141-bb83-e9c00cf68a3e" class="image"><a href="181-BOU-009/fig-1.png"><img style="width:709.984375px" src="181-BOU-009/fig-1.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-818f-b927-c79841448c3a" class="image"><a href="181-BOU-009/fig-2.png"><img style="width:710px" src="181-BOU-009/fig-2.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8162-8c72-e413c2a274b3" class="image"><a href="181-BOU-009/fig-3.png"><img style="width:710px" src="181-BOU-009/fig-3.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81e7-9cd9-c8ed9327dbb4" class="image"><a href="181-BOU-009/fig-4.png"><img style="width:710px" src="181-BOU-009/fig-4.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81fe-a47d-fbbc25a18fe3" class="image"><a href="181-BOU-009/fig-5.png"><img style="width:710px" src="181-BOU-009/fig-5.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81da-920e-d6b92bc48a28" class="image"><a href="181-BOU-009/fig-6.png"><img style="width:710px" src="181-BOU-009/fig-6.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81ec-92c0-fdb03b9230c1" class="image"><a href="181-BOU-009/fig-7.png"><img style="width:710px" src="181-BOU-009/fig-7.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81a0-8767-ecb988dc48dd" class="image"><a href="181-BOU-009/fig-8.png"><img style="width:710px" src="181-BOU-009/fig-8.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="2d9188db-8a4e-81e9-809d-c45c312cac57"/></div><div style="display:contents" dir="auto"><h2 id="2d9188db-8a4e-81cc-9706-c4720c0fc9f0" class=""><mark class="highlight-blue">How to draw 2</mark></h2></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8162-a50d-ea00c97e1112" class="image"><a href="181-BOU-009/fig-8-1.png"><img style="width:710px" src="181-BOU-009/fig-8-1.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81d1-b896-db7206b5c9d3" class="image"><a href="181-BOU-009/fig-8-2.png"><img style="width:710px" src="181-BOU-009/fig-8-2.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8110-a838-f239f9b67f9b" class="image"><a href="181-BOU-009/fig-8-3_-_%E8%A4%87%E8%A3%BD.png"><img style="width:710px" src="181-BOU-009/fig-8-3_-_%E8%A4%87%E8%A3%BD.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81d0-93fd-e6d13da16b05" class="image"><a href="181-BOU-009/fig-8-4.png"><img style="width:710px" src="181-BOU-009/fig-8-4.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81b8-8802-e1adb235d11f" class="image"><a href="181-BOU-009/fig-9A-big.png"><img style="width:710px" src="181-BOU-009/fig-9A-big.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8170-b456-c485965db9c0" class="image"><a href="181-BOU-009/fig-9B-big.png"><img style="width:710px" src="181-BOU-009/fig-9B-big.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="2d9188db-8a4e-810a-8964-c1d70028cc6c"/></div><div style="display:contents" dir="auto"><h2 id="2d9188db-8a4e-8168-83ab-fe83a8050928" class=""><mark class="highlight-blue">How to draw 3</mark></h2></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8118-936c-fb91b32644c8" class="image"><a href="181-BOU-009/fig-7%201.png"><img style="width:710px" src="181-BOU-009/fig-7%201.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81e0-9dfe-e72900d71b6f" class="image"><a href="181-BOU-009/fig-8A.png"><img style="width:710px" src="181-BOU-009/fig-8A.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8178-8199-ef9ae7b574f2" class="image"><a href="181-BOU-009/fig-8B.png"><img style="width:710px" src="181-BOU-009/fig-8B.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8158-929f-e4f0125e0ede" class="image"><a href="181-BOU-009/fig-8C.png"><img style="width:710px" src="181-BOU-009/fig-8C.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8188-8bad-fb42668cb457" class="image"><a href="181-BOU-009/fig-8D.png"><img style="width:710px" src="181-BOU-009/fig-8D.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8113-acdf-c1bad63ea3a2" class="image"><a href="181-BOU-009/fig-9.png"><img style="width:710px" src="181-BOU-009/fig-9.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81a5-9fc7-e87de34e01ae" class="image"><a href="181-BOU-009/fig-A.png"><img style="width:710px" src="181-BOU-009/fig-A.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-816d-a30e-d092ea2ab204" class="image"><a href="181-BOU-009/fig-B1.png"><img style="width:710px" src="181-BOU-009/fig-B1.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81de-a445-d4fb6a7aacc0" class="image"><a href="181-BOU-009/fig-B2.png"><img style="width:710px" src="181-BOU-009/fig-B2.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-81bb-87a6-f70eae9311a3" class="image"><a href="181-BOU-009/fig-B3.png"><img style="width:710px" src="181-BOU-009/fig-B3.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="2d9188db-8a4e-81bd-9d83-eb869c63dc70"/></div><div style="display:contents" dir="auto"><h2 id="2d9188db-8a4e-8162-a082-c5d4e9373435" class=""><mark class="highlight-blue">BOU-009-How-to-draw-1.py</mark></h2></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2d9188db-8a4e-8109-b9e1-eb2b8892465d" class="code code-wrap"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all"># BOU-009-How-to-draw-1.py
+#
+# 2020-08-27
+# 2024-07-09
+# 2024-07-20
+# 2025-06-02
+#
+# python 3.8.2
+# run on https://replit
+# run on ubuntu 22.04 LTS
+#
+# 要執行本程式, 請按上方 run▶
+#
+import numpy as np
+import matplotlib.pyplot as plt
+#
+from shapely import affinity
+from shapely.geometry import LineString, Point, Polygon
+#
+# 定義圖面函數
+def set_graphic_area(width,height) :
+
+    cm2inch = 1/2.54    # inch per cm
+    #
+    # define graphic area
+    #
+    left_margin = 1.0   # cm
+    right_margin = 1.0  # cm
+    #
+    figure_width  = width  # cm , from xmin to xmax
+    figure_height = height # cm , from ymin to ymax
+    #
+    top_margin = 1.0    # cm
+    bottom_margin = 1.0 # cm
+    #
+    box_width = left_margin + figure_width + right_margin   # cm
+    box_height = top_margin + figure_height + bottom_margin # cm
+    #
+    top_value    = 1.0 - top_margin / box_height
+    bottom_value = bottom_margin / box_height
+    left_value   = left_margin / box_width
+    right_value  = 1.0 - right_margin / box_width
+    #
+    return (box_width*cm2inch,box_height*cm2inch,top_value,bottom_value,left_value,right_value,width)
+    #
+# end of def
+#
+# Define the arc
+# center position is cxy = (cx, cy)
+# start_angle, end_angle is in degrees
+#
+def shapely_Arc(cxy, r, start_angle, end_angle) :
+    #
+    numsegments = 720
+    # The coordinates of the arc
+    theta = np.radians(np.linspace(start_angle, end_angle, numsegments))
+    x = cxy[0] + r * np.cos(theta)
+    y = cxy[1] + r * np.sin(theta)
+    Arc = LineString(np.column_stack([x, y]))
+    return Arc
+    #
+# end of def
+#
+# p1 = 六邊形中心點, 型態Point
+# r1 = 外接圓半徑
+# color = 線段顏色
+def drawHex_flat_by_width(p1, r1, mycolor, line_width) :
+    #
+    hexP1 = (r1*np.cos(0*np.pi/3), r1*np.sin(0*np.pi/3))
+    hexP2 = (r1*np.cos(1*np.pi/3), r1*np.sin(1*np.pi/3))
+    hexP3 = (r1*np.cos(2*np.pi/3), r1*np.sin(2*np.pi/3))
+    hexP4 = (r1*np.cos(3*np.pi/3), r1*np.sin(3*np.pi/3))
+    hexP5 = (r1*np.cos(4*np.pi/3), r1*np.sin(4*np.pi/3))
+    hexP6 = (r1*np.cos(5*np.pi/3), r1*np.sin(5*np.pi/3))
+    hexP7 = (r1*np.cos(6*np.pi/3), r1*np.sin(6*np.pi/3))
+    #
+    hex0 = [hexP1, hexP2, hexP3, hexP4, hexP5, hexP6, hexP7]
+    hex1_line = affinity.translate(LineString(hex0), p1.x, p1.y, 0)
+    xs, ys = hex1_line.xy
+    ax.plot(xs, ys, color=mycolor, alpha=1.0, linewidth=line_width, solid_capstyle=&#x27;round&#x27;, zorder=15)
+    return 
+    #
+# end def
+#
+def drawHex_flat_by_width_z95(p1, r1, mycolor, line_width) :
+    #
+    hexP1 = (r1*np.cos(0*np.pi/3), r1*np.sin(0*np.pi/3))
+    hexP2 = (r1*np.cos(1*np.pi/3), r1*np.sin(1*np.pi/3))
+    hexP3 = (r1*np.cos(2*np.pi/3), r1*np.sin(2*np.pi/3))
+    hexP4 = (r1*np.cos(3*np.pi/3), r1*np.sin(3*np.pi/3))
+    hexP5 = (r1*np.cos(4*np.pi/3), r1*np.sin(4*np.pi/3))
+    hexP6 = (r1*np.cos(5*np.pi/3), r1*np.sin(5*np.pi/3))
+    hexP7 = (r1*np.cos(6*np.pi/3), r1*np.sin(6*np.pi/3))
+    #
+    hex0 = [hexP1, hexP2, hexP3, hexP4, hexP5, hexP6, hexP7]
+    hex1_line = affinity.translate(LineString(hex0), p1.x, p1.y, 0)
+    xs, ys = hex1_line.xy
+    ax.plot(xs, ys, color=mycolor, alpha=1.0, linewidth=line_width, solid_capstyle=&#x27;round&#x27;, zorder=95)
+    return 
+    #
+# end def
+#
+# 下列getHexCornerXY函數, 可運算回傳六邊形某一角之座標值 
+#  p1 ------&gt; 六邊形中心點 (Point型態)
+#  r1  ------&gt; 外接圓半徑   
+#  cornor --&gt; 六邊形某角之編號  
+#
+def getHexCornerXY(p1, r1, cornor)  :
+    #
+    hexPXY0 = (r1*np.cos(Hex[cornor]), r1*np.sin(Hex[cornor]))
+    hexPXY1 = affinity.translate(Point(hexPXY0), p1.x, p1.y, 0)
+    return hexPXY1
+# end def
+#
+# ------------------------------------------------------------
+#
+r0 = 6
+r1 = 1
+r2 = r1*np.sqrt(3)/2
+#
+tup7 = set_graphic_area(2*r0, 2*r0)
+# 呼叫 pyplot.figure(), 建立一個圖表物件, 並成為目前圖表物件
+fig = plt.figure(figsize=(tup7[0], tup7[1]))
+# 圖表的繪圖區域被分為1個子圖, 1 row, 1 column, plot to index 1
+ax = fig.add_subplot(1,1,1)
+fig.subplots_adjust(
+                top    = tup7[2] ,
+                bottom = tup7[3] ,
+                left   = tup7[4] ,
+                right  = tup7[5] ,
+                )
+#
+# 設定X軸的顯示範圍, from xmin to xmax
+plt.xlim(-r0, r0)
+# 設定Y軸的顯示範圍, from ymin to ymax
+plt.ylim(-r0, r0)
+#
+# get current axes, set X,Y same ratio &amp; scale
+plt.gca().set_aspect(&#x27;equal&#x27;, adjustable=&#x27;box&#x27;) 
+# ax.grid(True)
+ax.grid(False)
+# ax.set_axis_on() # will turn on grid line
+ax.set_axis_off()  # will turn off grid line
+#
+## ==========================================
+#
+theta000 = 0*np.pi/3
+theta060 = 1*np.pi/3
+theta120 = 2*np.pi/3
+theta180 = 3*np.pi/3
+theta240 = 4*np.pi/3
+theta300 = 5*np.pi/3
+#
+Hex = (theta000, theta060, 
+       theta120, theta180, 
+       theta240, theta300)
+#
+cen    = Point(0,0)
+cen_xy = (0,0)
+# drawHex_flat_by_width(cen, 2*r1, &#x27;green&#x27;, 2.0)
+#
+p2 = getHexCornerXY(cen, 2*r1, 2)
+p2_xy = (p2.x, p2.y)
+#
+UL_cen = getHexCornerXY(cen, 3*r1, 2)
+UL_cen_xy = (UL_cen.x, UL_cen.y)
+#
+p1_xy = (0, p2.y)
+p1 = Point(p1_xy)
+p3 = affinity.rotate(p1, 60, cen_xy)
+p3_xy = (p3.x, p3.y)
+#
+line_motif_1_xy = [p1_xy, p2_xy, p3_xy]
+line_motif_1 = LineString(line_motif_1_xy)
+line_motif_2 = affinity.rotate(line_motif_1, 60, UL_cen_xy)
+line_motif_3 = affinity.rotate(line_motif_1,120, UL_cen_xy)
+line_motif_4 = affinity.rotate(line_motif_1,180, UL_cen_xy)
+line_motif_5 = affinity.rotate(line_motif_1,240, UL_cen_xy)
+line_motif_6 = affinity.rotate(line_motif_1,300, UL_cen_xy)
+#
+line_motif_1_xy = []
+line_motif_2_xy = []
+line_motif_3_xy = []
+line_motif_4_xy = []
+line_motif_5_xy = []
+line_motif_6_xy = []
+#
+for xy in line_motif_1.coords[:] :
+    line_motif_1_xy.append(xy)
+# for
+for xy in line_motif_2.coords[:] :
+    line_motif_2_xy.append(xy)
+# for
+for xy in line_motif_3.coords[:] :
+    line_motif_3_xy.append(xy)
+# for
+for xy in line_motif_4.coords[:] :
+    line_motif_4_xy.append(xy)
+# for
+for xy in line_motif_5.coords[:] :
+    line_motif_5_xy.append(xy)
+# for
+for xy in line_motif_6.coords[:] :
+    line_motif_6_xy.append(xy)
+# for
+#
+# 有精度誤差, 所以手工調整 令 big_star_xy[0] 與 big_star_xy[12] 等值
+big_star_xy = [line_motif_1_xy[2], 
+               line_motif_1_xy[1], line_motif_1_xy[0],
+               line_motif_2_xy[1], line_motif_2_xy[0],
+               line_motif_3_xy[1], line_motif_3_xy[0],
+               line_motif_4_xy[1], line_motif_4_xy[0],
+               line_motif_5_xy[1], line_motif_5_xy[0],
+               line_motif_6_xy[1], line_motif_1_xy[2]]
+#
+big_star  = LineString(big_star_xy)
+poly_star = Polygon(big_star_xy)
+star_cen  = poly_star.centroid      # Point format
+star_cen_xy = star_cen.coords[:][0] # tuple format
+# print (star_cen_xy)
+# sys.exit()
+#
+red_star_cen_mark  = shapely_Arc(star_cen_xy, 0.1, 0, 360)
+star_xy = [line_motif_5_xy[2], line_motif_5_xy[1], line_motif_5_xy[0],
+           line_motif_6_xy[1], line_motif_6_xy[0]]
+star    = LineString(star_xy)
+#
+# plot.savefig(&#x27;fig-2.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+blue_star_cen  = affinity.translate(star_cen, 4*r1,-2*r2)
+green_star_cen = affinity.translate(star_cen,-4*r1, 2*r2)
+blue_star_cen_xy  = (blue_star_cen.x, blue_star_cen.y)
+green_star_cen_xy = (green_star_cen.x, green_star_cen.y)
+#
+blue_star_cen_mark = shapely_Arc(blue_star_cen_xy, 0.2, 0, 360)
+green_star_cen_mark = shapely_Arc(green_star_cen_xy, 0.2, 0, 360)
+#
+p4 = getHexCornerXY(cen, 2*r1, 3)
+p4_xy = (p4.x, p4.y)
+p5 = affinity.rotate(p1, 120, cen_xy)
+p5_xy = (p5.x, p5.y)
+p6 = affinity.rotate(p5, -60, p4_xy)
+p7 = affinity.rotate(p5,-120, p4_xy)
+p8 = affinity.rotate(p3,  60, p4_xy)
+p9 = affinity.rotate(p1, 180, UL_cen_xy)
+p6_xy = (p6.x, p6.y)
+p7_xy = (p7.x, p7.y)
+p8_xy = (p8.x, p8.y)
+p9_xy = (p9.x, p9.y)
+#
+pA = getHexCornerXY(cen, 1*r1, 1)
+pB = getHexCornerXY(cen, 1*r1, 2)
+pA_xy = (pA.x, pA.y)
+pB_xy = (pB.x, pB.y)
+#
+tri_1 = Polygon([pA_xy, pB_xy, cen_xy])
+tri_2 = Polygon([p4_xy, p7_xy, p8_xy])
+cen_tri_1 = tri_1.centroid
+cen_tri_2 = tri_2.centroid
+cen_tri_1_xy = cen_tri_1.coords[:][0]
+cen_tri_2_xy = cen_tri_2.coords[:][0]
+#
+zig_xy = [pB_xy, p5_xy, p6_xy, 
+          p7_xy, cen_tri_2_xy, p4_xy, 
+          p2_xy, p1_xy, 
+          pA_xy, cen_tri_1_xy, pB_xy]
+zig_A = LineString(zig_xy)
+zig_B = affinity.rotate(zig_A, 120, cen_tri_1_xy)
+zig_C = affinity.rotate(zig_A, 240, cen_tri_1_xy)
+#
+#  getHexCornerXY(p1, r1, cornor)函數, 可運算回傳六邊形某一角之座標值 
+#  p1 ------&gt; 六邊形中心點 (Point型態)
+#  r1  ------&gt; 外接圓半徑   
+#  cornor --&gt; 六邊形某角之編號  
+#
+green_star_cen = affinity.translate(star_cen, 8*r1, -4*r2)
+T_cen = affinity.translate(green_star_cen, -1*r1/2, 1*5*r2)     
+# drawHex_flat_by_width(T_cen, 2*r1, &#x27;black&#x27;, 2.0)
+#
+cornor_p0 = getHexCornerXY(T_cen, 2*r1, 0)
+cornor_p1 = getHexCornerXY(T_cen, 2*r1, 1)
+cornor_p2 = getHexCornerXY(T_cen, 2*r1, 2)
+cornor_p3 = getHexCornerXY(T_cen, 2*r1, 3)
+cornor_p4 = getHexCornerXY(T_cen, 2*r1, 4)
+cornor_p5 = getHexCornerXY(T_cen, 2*r1, 5)
+#
+line_p2_p3 = LineString([(cornor_p2.x, cornor_p2.y), (cornor_p3.x, cornor_p3.y)])
+line_p3_p4 = LineString([(cornor_p3.x, cornor_p3.y), (cornor_p4.x, cornor_p4.y)])
+mid_p2_p3  = line_p2_p3.interpolate(0.5, normalized = True)
+mid_p3_p4  = line_p3_p4.interpolate(0.5, normalized = True)
+#
+dx1 = cornor_p2.x - cornor_p5.x
+dy1 = cornor_p2.y - cornor_p5.y
+dx2 = mid_p2_p3.x - cornor_p2.x
+dy2 = mid_p2_p3.y - cornor_p2.y
+dx3 = cornor_p1.x - cornor_p4.x
+dy3 = cornor_p1.y - cornor_p4.y
+dx4 = mid_p3_p4.x - cornor_p4.x
+dy4 = mid_p3_p4.y - cornor_p4.y
+dx5 = cornor_p3.x - cornor_p0.x
+#
+grid_p1 = affinity.translate(cornor_p2,  12*dx1,  12*dy1)
+grid_p2 = affinity.translate(cornor_p5, -12*dx1, -12*dy1)
+grid_line_p1_p2 = LineString([(grid_p1.x, grid_p1.y) , (grid_p2.x, grid_p2.y)])
+xs, ys = grid_line_p1_p2.xy
+ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+#
+grid_p3 = affinity.translate(cornor_p1,  12*dx3,  12*dy3)
+grid_p4 = affinity.translate(cornor_p4, -12*dx3, -12*dy3)
+grid_line_p3_p4 = LineString([(grid_p3.x, grid_p3.y) , (grid_p4.x, grid_p4.y)])
+xs, ys = grid_line_p3_p4.xy
+ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+#
+grid_p5 = affinity.translate(cornor_p3, 5*dx5, 0)
+grid_p6 = cornor_p0
+grid_line_p5_p6 = LineString([(grid_p5.x, grid_p5.y) , (grid_p6.x, grid_p6.y)])
+xs, ys = grid_line_p5_p6.xy
+ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+#
+for i in range(1,20) :
+    t_line = affinity.translate(grid_line_p1_p2, i*dx2, i*dy2)
+    xs, ys = t_line.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+for i in range(1,13) :
+    t_line = affinity.translate(grid_line_p3_p4, i*dx4, i*dy4)
+    xs, ys = t_line.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+for i in range(1,8) :
+    t_line = affinity.translate(grid_line_p3_p4, -i*dx4, -i*dy4)
+    xs, ys = t_line.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+for i in range(1,4) :
+    t_line = affinity.translate(grid_line_p5_p6, 0, i*r2)
+    xs, ys = t_line.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+for i in range(1,11) :
+    t_line = affinity.translate(grid_line_p5_p6, 0, -i*r2)
+    xs, ys = t_line.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=0.5, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+plt.savefig(&#x27;./png/fig-01.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((-1*r1/2, 1*5*r2), (0, 0),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+           (5*r1/2, -5*5*r2)) :
+    T_star_cen = affinity.translate(star_cen, xy[0], xy[1])
+    drawHex_flat_by_width_z95(T_star_cen, 2*r1, &#x27;red&#x27;, 1.0)
+# end for
+#
+tx = 2
+tx_list = []
+for xy in ((0, 0), (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2)) :
+    T_star_cen = affinity.translate(star_cen, xy[0], xy[1])
+    T_star_cen_xy = (T_star_cen.x, T_star_cen.y)
+    tx_list.append((T_star_cen_xy[0]+tx, T_star_cen_xy[1]))
+# end for
+#
+plt.savefig(&#x27;./png/fig-02.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((-1*r1/2, 1*5*r2), (0, 0),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2)) :
+    blue_star_cen = affinity.translate(star_cen, 4*r1, -2*r2)
+    T_cen = affinity.translate(blue_star_cen, xy[0], xy[1])     
+    drawHex_flat_by_width_z95(T_cen, 2*r1, &#x27;red&#x27;, 1.0)
+# end for
+#
+plt.savefig(&#x27;./png/fig-03.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((0, 0),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+           (5*r1/2, -5*5*r2), (6*r1/2, -6*5*r2)) :
+    green_star_cen = affinity.translate(star_cen, -4*r1, 2*r2)
+    T_cen = affinity.translate(green_star_cen, xy[0], xy[1])     
+    drawHex_flat_by_width_z95(T_cen, 2*r1, &#x27;green&#x27;, 1.0)
+# end for
+#
+plt.savefig(&#x27;./png/fig-04.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((-1*r1/2, 1*5*r2), (0, 0), (1*r1/2, -1*5*r2)) :
+    green_star_cen = affinity.translate(star_cen, 8*r1, -4*r2)
+    T_cen = affinity.translate(green_star_cen, xy[0], xy[1])     
+    drawHex_flat_by_width_z95(T_cen, 2*r1, &#x27;green&#x27;, 1.0)
+# end for
+#
+plt.savefig(&#x27;./png/fig-05.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+mark_2 = Point(line_motif_4_xy[0])
+mark_3 = Point(line_motif_6_xy[0])
+T_mark_2 = affinity.translate(mark_2, 1*r1/2, -1*5*r2)
+T_mark_3 = affinity.translate(mark_3, 4*r1, -2*r2)
+#
+mark_1_xy = line_motif_2_xy[0]
+T_mark_2_xy = (T_mark_2.x, T_mark_2.y)
+T_mark_3_xy = (T_mark_3.x, T_mark_3.y)
+#
+big_Triangle = LineString([mark_1_xy, T_mark_2_xy, T_mark_3_xy])
+xs,ys = big_Triangle.xy
+ax.fill(xs, ys, alpha=0.7, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;darkolivegreen&#x27;, 
+                fill=True, zorder=5)
+#
+plt.savefig(&#x27;./png/fig-06.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+T1_big_star = affinity.translate(big_star, 1*r1/2, -1*5*r2)         
+T2_big_star = affinity.translate(big_star, 4*r1, -2*r2)
+#
+for yellow_star in (big_star, T1_big_star, T2_big_star) :
+    xs, ys = yellow_star.xy
+    ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;yellow&#x27;, 
+            fill=True, zorder=75)
+# end for
+#
+plt.savefig(&#x27;./png/fig-07.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+xs, ys = zig_A.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;pink&#x27;, 
+            fill=True, zorder=10)
+ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.4, solid_capstyle=&#x27;round&#x27;, zorder=100)
+#
+plt.savefig(&#x27;./png/fig-08.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+xs, ys = zig_B.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;lightgreen&#x27;, 
+            fill=True, zorder=10)
+ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.4, solid_capstyle=&#x27;round&#x27;, zorder=100)
+#
+plt.savefig(&#x27;./png/fig-09.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+xs, ys = zig_C.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;lightgreen&#x27;, 
+            fill=True, zorder=10)
+ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.4, solid_capstyle=&#x27;round&#x27;, zorder=100)
+#
+plt.savefig(&#x27;./png/fig-10.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+t_4x_2y_zig_A = affinity.translate(zig_A, 4*r1, -2*r2)
+xs, ys = t_4x_2y_zig_A.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;pink&#x27;, 
+            fill=True, zorder=10)
+ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.4, solid_capstyle=&#x27;round&#x27;, zorder=100)
+#
+#
+plt.savefig(&#x27;./png/fig-11.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+print(&#x27;done&#x27;)
+print(&#x27;press Stop to exit&#x27;)
+plt.show()</code></pre></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-81a3-89b8-dd387e5f7251" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2d9188db-8a4e-81dc-8704-ed70cb4838a4"/></div><div style="display:contents" dir="auto"><h2 id="2d9188db-8a4e-812e-848d-f90f4d4dfff9" class=""><mark class="highlight-blue">BOU-009-How-to-draw-2.py</mark></h2></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2d9188db-8a4e-81e7-a294-fc479d937e0f" class="code code-wrap"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all"># BOU-009-How-to-draw-2.py
+#
+# 2020-08-27
+# 2024-07-09
+# 2024-07-20
+# 2025-06-02
+#
+# python 3.8.2
+# run on https://replit
+# run on ubuntu 22.04 LTS
+#
+# 要執行本程式, 請按上方 run▶
+#
+# colour，一个有趣的 Python 庫！
+# https://github.com/colour-science/colour
+#
+# We can add Dependencies tab
+# to view the Imports and Dependencies
+# of the code.
+#
+import numpy as np
+import matplotlib.pyplot as plt
+from colour import Color
+#
+from shapely import affinity
+from shapely.geometry import LineString, Point, Polygon
+#
+# 定義圖面函數
+def set_graphic_area(width,height) :
+
+    cm2inch = 1/2.54    # inch per cm
+    #
+    # define graphic area
+    #
+    left_margin = 1.0   # cm
+    right_margin = 1.0  # cm
+    #
+    figure_width  = width  # cm , from xmin to xmax
+    figure_height = height # cm , from ymin to ymax
+    #
+    top_margin = 1.0    # cm
+    bottom_margin = 1.0 # cm
+    #
+    box_width = left_margin + figure_width + right_margin   # cm
+    box_height = top_margin + figure_height + bottom_margin # cm
+    #
+    top_value    = 1.0 - top_margin / box_height
+    bottom_value = bottom_margin / box_height
+    left_value   = left_margin / box_width
+    right_value  = 1.0 - right_margin / box_width
+    #
+    return (box_width*cm2inch,box_height*cm2inch,top_value,bottom_value,left_value,right_value,width)
+    #
+# end of def
+#
+# Define the arc
+# center position is cxy = (cx, cy)
+# start_angle, end_angle is in degrees
+#
+def shapely_Arc(cxy, r, start_angle, end_angle) :
+    #
+    numsegments = 720
+    # The coordinates of the arc
+    theta = np.radians(np.linspace(start_angle, end_angle, numsegments))
+    x = cxy[0] + r * np.cos(theta)
+    y = cxy[1] + r * np.sin(theta)
+    Arc = LineString(np.column_stack([x, y]))
+    return Arc
+    #
+# end of def
+#
+# p1 = 六邊形中心點, 型態Point
+# r1 = 外接圓半徑
+# color = 線段顏色
+def drawHex_flat_by_width(p1, r1, mycolor, line_width) :
+    #
+    hexP1 = (r1*np.cos(0*np.pi/3), r1*np.sin(0*np.pi/3))
+    hexP2 = (r1*np.cos(1*np.pi/3), r1*np.sin(1*np.pi/3))
+    hexP3 = (r1*np.cos(2*np.pi/3), r1*np.sin(2*np.pi/3))
+    hexP4 = (r1*np.cos(3*np.pi/3), r1*np.sin(3*np.pi/3))
+    hexP5 = (r1*np.cos(4*np.pi/3), r1*np.sin(4*np.pi/3))
+    hexP6 = (r1*np.cos(5*np.pi/3), r1*np.sin(5*np.pi/3))
+    hexP7 = (r1*np.cos(6*np.pi/3), r1*np.sin(6*np.pi/3))
+    #
+    hex0 = [hexP1, hexP2, hexP3, hexP4, hexP5, hexP6, hexP7]
+    hex1_line = affinity.translate(LineString(hex0), p1.x, p1.y, 0)
+    xs, ys = hex1_line.xy
+    ax.plot(xs, ys, color=mycolor, alpha=1.0, linewidth=line_width, solid_capstyle=&#x27;round&#x27;, zorder=15)
+    return 
+    #
+# end def
+#
+# 下列getHexCornerXY函數, 可運算回傳六邊形某一角之座標值 
+#  p1 ------&gt; 六邊形中心點 (Point型態)
+#  r1  ------&gt; 外接圓半徑   
+#  cornor --&gt; 六邊形某角之編號  
+#
+def getHexCornerXY(p1, r1, cornor)  :
+    #
+    hexPXY0 = (r1*np.cos(Hex[cornor]), r1*np.sin(Hex[cornor]))
+    hexPXY1 = affinity.translate(Point(hexPXY0), p1.x, p1.y, 0)
+    return hexPXY1
+# end def
+#
+# ------------------------------------------------------------
+#
+r0 = 14
+r1 = 1
+r2 = r1*np.sqrt(3)/2
+#
+tup7 = set_graphic_area(2*r0, 2*r0)
+# 呼叫 pyplot.figure(), 建立一個圖表物件, 並成為目前圖表物件
+fig = plt.figure(figsize=(tup7[0], tup7[1]))
+# 圖表的繪圖區域被分為1個子圖, 1 row, 1 column, plot to index 1
+ax = fig.add_subplot(1,1,1)
+fig.subplots_adjust(
+                top    = tup7[2] ,
+                bottom = tup7[3] ,
+                left   = tup7[4] ,
+                right  = tup7[5] ,
+                )
+#
+# 設定X軸的顯示範圍, from xmin to xmax
+plt.xlim(-r0-2, r0-4)
+# 設定Y軸的顯示範圍, from ymin to ymax
+plt.ylim(-20, 6)
+#
+xvalues =           [-16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10]
+yvalues = [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6]
+            
+#
+plt.xticks(xvalues)
+plt.yticks(yvalues)
+plt.tick_params(labelsize=9)
+plt.grid(color=&#x27;green&#x27;, linewidth=0.4)
+ax.grid(True)
+# ax.grid(False)
+plt.gca().set_aspect(&#x27;equal&#x27;, adjustable=&#x27;box&#x27;)
+ax.set_axis_on() # will turn on grid line
+# ax.set_axis_off()  # will turn off grid line
+#
+plt.savefig(&#x27;./png/fig-00.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+## ==========================================
+#
+# 16進位顏色代碼
+# http://www.eion.com.tw/Blogger/?Pid=1008
+#
+# colors is now a list of length 10, Containing :
+# [&lt;Color firebrick&gt;, -.-.-.- , &lt;Color purple&gt;]
+#
+color_list = []
+burlywood = Color(rgb=(222/255,184/255,135/255))
+gold1 = Color(rgb=(1,215/255,0))
+myColors = list(burlywood.range_to(gold1,15))
+for item in myColors :
+    if str(item)[0] == &#x27;#&#x27; and len(str(item)) == 4 :
+        color_list.append(str(item)[0] + &#x27;000&#x27; + str(item)[-3:])
+    else :
+        color_list.append(str(item))
+    # end if
+# end for
+print(color_list)
+#
+# rectangle 矩形
+for y in (6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5) :
+    rec_xy = [(-r0-2, y-1), 
+              ( r0-2, y-1), 
+              ( r0-2, y), 
+              (-r0-2, y)]
+    rectangle = LineString(rec_xy)
+    xs, ys = rectangle.xy
+    ax.fill(xs, ys, alpha=0.5, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=color_list[y-6], 
+            fill=True, zorder=10) 
+# end for 
+#
+for y in (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20) :
+    rec_xy = [(-r0-4, -y+1), 
+              ( r0-4, -y+1), 
+              ( r0-4, -y), 
+              (-r0-4, -y)]
+    rectangle = LineString(rec_xy)
+    xs, ys = rectangle.xy
+    ax.fill(xs, ys, alpha=0.5, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=color_list[y-6], 
+            fill=True, zorder=10) 
+# end for 
+#
+### ----------------------------------------------------
+#
+plt.savefig(&#x27;./png/fig-11.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+theta000 = 0*np.pi/3
+theta060 = 1*np.pi/3
+theta120 = 2*np.pi/3
+theta180 = 3*np.pi/3
+theta240 = 4*np.pi/3
+theta300 = 5*np.pi/3
+#
+Hex = (theta000, theta060, 
+       theta120, theta180, 
+       theta240, theta300)
+#
+cen    = Point(0,0)
+cen_xy = (0,0)
+drawHex_flat_by_width(cen, 2*r1, &#x27;green&#x27;, 2.0)
+#
+p2 = getHexCornerXY(cen, 2*r1, 2)
+p2_xy = (p2.x, p2.y)
+#
+UL_cen = getHexCornerXY(cen, 3*r1, 2)
+UL_cen_xy = (UL_cen.x, UL_cen.y)
+#
+p1_xy = (0, p2.y)
+p1 = Point(p1_xy)
+p3 = affinity.rotate(p1, 60, cen_xy)
+p3_xy = (p3.x, p3.y)
+#
+line_motif_1_xy = [p1_xy, p2_xy, p3_xy]
+line_motif_1 = LineString(line_motif_1_xy)
+line_motif_2 = affinity.rotate(line_motif_1, 60, UL_cen_xy)
+line_motif_3 = affinity.rotate(line_motif_1,120, UL_cen_xy)
+line_motif_4 = affinity.rotate(line_motif_1,180, UL_cen_xy)
+line_motif_5 = affinity.rotate(line_motif_1,240, UL_cen_xy)
+line_motif_6 = affinity.rotate(line_motif_1,300, UL_cen_xy)
+#
+line_motif_1_xy = []
+line_motif_2_xy = []
+line_motif_3_xy = []
+line_motif_4_xy = []
+line_motif_5_xy = []
+line_motif_6_xy = []
+#
+for xy in line_motif_1.coords[:] :
+    line_motif_1_xy.append(xy)
+# for
+for xy in line_motif_2.coords[:] :
+    line_motif_2_xy.append(xy)
+# for
+for xy in line_motif_3.coords[:] :
+    line_motif_3_xy.append(xy)
+# for
+for xy in line_motif_4.coords[:] :
+    line_motif_4_xy.append(xy)
+# for
+for xy in line_motif_5.coords[:] :
+    line_motif_5_xy.append(xy)
+# for
+for xy in line_motif_6.coords[:] :
+    line_motif_6_xy.append(xy)
+# for
+#
+# 有精度誤差, 所以手工調整 令 big_star_xy[0] 與 big_star_xy[12] 等值
+big_star_xy = [line_motif_1_xy[2], 
+               line_motif_1_xy[1], line_motif_1_xy[0],
+               line_motif_2_xy[1], line_motif_2_xy[0],
+               line_motif_3_xy[1], line_motif_3_xy[0],
+               line_motif_4_xy[1], line_motif_4_xy[0],
+               line_motif_5_xy[1], line_motif_5_xy[0],
+               line_motif_6_xy[1], line_motif_1_xy[2]]
+#
+big_star  = LineString(big_star_xy)
+poly_star = Polygon(big_star_xy)
+star_cen  = poly_star.centroid      # Point format
+star_cen_xy = star_cen.coords[:][0] # tuple format
+# print (star_cen_xy)
+# sys.exit()
+#
+red_star_cen_mark  = shapely_Arc(star_cen_xy,      0.2, 0, 360)
+xs,ys = red_star_cen_mark.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;red&#x27;, 
+                fill=True, zorder=45)
+#
+star_xy = [line_motif_5_xy[2], line_motif_5_xy[1], line_motif_5_xy[0],
+           line_motif_6_xy[1], line_motif_6_xy[0]]
+star    = LineString(star_xy)
+#
+for motif in (line_motif_1, line_motif_2, 
+              line_motif_3, line_motif_4,
+              line_motif_5, line_motif_6) :
+    xs, ys = motif.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=1.0, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+plt.savefig(&#x27;./png/fig-12.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for motif in (line_motif_1, line_motif_2, 
+              line_motif_3, line_motif_4,
+              line_motif_5, line_motif_6) :
+    motif_T = affinity.translate(motif, 4*r1,-2*r2, 0)
+    xs, ys = motif_T.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=1.0, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+blue_star_cen  = affinity.translate(star_cen, 4*r1,-2*r2)
+green_star_cen = affinity.translate(star_cen,-4*r1, 2*r2)
+blue_star_cen_xy  = (blue_star_cen.x, blue_star_cen.y)
+green_star_cen_xy = (green_star_cen.x, green_star_cen.y)
+#
+blue_star_cen_mark = shapely_Arc(blue_star_cen_xy, 0.2, 0, 360)
+xs,ys = blue_star_cen_mark.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;blue&#x27;, 
+                fill=True, zorder=45)
+#
+green_star_cen_mark = shapely_Arc(green_star_cen_xy, 0.2, 0, 360)
+xs,ys = green_star_cen_mark.xy
+ax.fill(xs, ys, alpha=1.0, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;green&#x27;, 
+                fill=True, zorder=45)
+#
+plt.savefig(&#x27;./png/fig-13.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for motif in (line_motif_1, line_motif_2, 
+              line_motif_3, line_motif_4,
+              line_motif_5, line_motif_6) :
+    motif_T = affinity.translate(motif, 0.5*r1,-5*r2, 0)
+    xs, ys = motif_T.xy
+    ax.plot(xs, ys, color=&#x27;blue&#x27;, alpha=1.0, linewidth=1.0, solid_capstyle=&#x27;round&#x27;, zorder=15)
+# end for
+#
+plt.savefig(&#x27;./png/fig-14.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+p4 = getHexCornerXY(cen, 2*r1, 3)
+p4_xy = (p4.x, p4.y)
+p5 = affinity.rotate(p1, 120, cen_xy)
+p5_xy = (p5.x, p5.y)
+p6 = affinity.rotate(p5, -60, p4_xy)
+p7 = affinity.rotate(p5,-120, p4_xy)
+p8 = affinity.rotate(p3,  60, p4_xy)
+p9 = affinity.rotate(p1, 180, UL_cen_xy)
+p6_xy = (p6.x, p6.y)
+p7_xy = (p7.x, p7.y)
+p8_xy = (p8.x, p8.y)
+p9_xy = (p9.x, p9.y)
+#
+pA = getHexCornerXY(cen, 1*r1, 1)
+pB = getHexCornerXY(cen, 1*r1, 2)
+pA_xy = (pA.x, pA.y)
+pB_xy = (pB.x, pB.y)
+#
+tri_1 = Polygon([pA_xy, pB_xy, cen_xy])
+tri_2 = Polygon([p4_xy, p7_xy, p8_xy])
+cen_tri_1 = tri_1.centroid
+cen_tri_2 = tri_2.centroid
+cen_tri_1_xy = cen_tri_1.coords[:][0]
+cen_tri_2_xy = cen_tri_2.coords[:][0]
+#
+zig_xy = [pB_xy, p5_xy, p6_xy, 
+          p7_xy, cen_tri_2_xy, p4_xy, 
+          p2_xy, p1_xy, 
+          pA_xy, cen_tri_1_xy, pB_xy]
+zig_A = LineString(zig_xy)
+zig_B = affinity.rotate(zig_A, 120, cen_tri_1_xy)
+zig_C = affinity.rotate(zig_A, 240, cen_tri_1_xy)
+#
+for zig in (zig_A, zig_B, zig_C) :
+    xs, ys = zig.xy
+    ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;pink&#x27;, 
+            fill=True, zorder=15)
+    ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.2, solid_capstyle=&#x27;round&#x27;, zorder=25)
+# end for
+#
+plt.savefig(&#x27;./png/fig-15.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((-1*r1/2, 1*5*r2), (0, 0),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+           (5*r1/2, -5*5*r2)) :
+    T_star_cen = affinity.translate(star_cen, xy[0], xy[1])
+    drawHex_flat_by_width(T_star_cen, 2*r1, &#x27;red&#x27;, 1.0)
+# end for
+#
+for xy in ((1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+           (5*r1/2, -5*5*r2)) :
+    T_star_cen = affinity.translate(star_cen, xy[0], xy[1])
+    T_star_cen_xy = (T_star_cen.x, T_star_cen.y)
+    red_star_cen_mark = shapely_Arc(T_star_cen_xy, 0.2, 0, 360)
+    xs,ys = red_star_cen_mark.xy
+    ax.fill(xs, ys, alpha=1.0, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;red&#x27;, 
+                fill=True, zorder=45)
+# end for
+#
+for zig in (zig_A, zig_B, zig_C) :
+    for xy in ((-1*r1/2, 1*5*r2),
+               (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+               (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+               (5*r1/2, -5*5*r2)) :
+        zig_T = affinity.translate(zig, xy[0], xy[1])
+        xs, ys = zig_T.xy
+        ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;pink&#x27;, 
+            fill=True, zorder=15)
+        ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.2, solid_capstyle=&#x27;round&#x27;, zorder=25)
+    # end for
+# end for
+#
+plt.savefig(&#x27;./png/fig-16.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((-1*r1/2, 1*5*r2),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2)) :
+    blue_star_cen = affinity.translate(star_cen, 4*r1, -2*r2)
+    T_star_cen = affinity.translate(blue_star_cen, xy[0], xy[1])
+    T_star_cen_xy = (T_star_cen.x, T_star_cen.y)
+    T_big_star_cen_mark = shapely_Arc(T_star_cen_xy, 0.2, 0, 360)
+    xs,ys = T_big_star_cen_mark.xy
+    ax.fill(xs, ys, alpha=1.0, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;blue&#x27;, 
+                fill=True, zorder=45)
+# end for
+#
+for xy in ((-1*r1/2, 1*5*r2), (0, 0),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2)) :
+    blue_star_cen = affinity.translate(star_cen, 4*r1, -2*r2)
+    T_cen = affinity.translate(blue_star_cen, xy[0], xy[1])     
+    drawHex_flat_by_width(T_cen, 2*r1, &#x27;blue&#x27;, 1.0)
+# end for
+#
+for zig in (zig_A, zig_B, zig_C) :
+    for xy in ((-1*r1/2, 1*5*r2), (0, 0),
+               (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+               (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2)) :
+        zig_T1 = affinity.translate(zig, 4*r1, -2*r2)
+        zig_T2 = affinity.translate(zig_T1, xy[0], xy[1])
+        xs, ys = zig_T2.xy
+        ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;cadetblue&#x27;, 
+            fill=True, zorder=15)
+        ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.2, solid_capstyle=&#x27;round&#x27;, zorder=25)
+    # end for
+# end for
+#
+plt.savefig(&#x27;./png/fig-17.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+for xy in ((1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+           (5*r1/2, -5*5*r2)) :
+    green_star_cen = affinity.translate(star_cen, -4*r1, 2*r2)
+    T_star_cen = affinity.translate(green_star_cen, xy[0], xy[1])
+    T_star_cen_xy = (T_star_cen.x, T_star_cen.y)
+    T_big_star_cen_mark = shapely_Arc(T_star_cen_xy, 0.2, 0, 360)
+    xs,ys = T_big_star_cen_mark.xy
+    ax.fill(xs, ys, alpha=1.0, closed=True, 
+                edgecolor=&#x27;none&#x27;, facecolor=&#x27;green&#x27;, 
+                fill=True, zorder=45)
+# end for
+#
+for xy in ((0, 0),
+           (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+           (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+           (5*r1/2, -5*5*r2)) :
+    green_star_cen = affinity.translate(star_cen, -4*r1, 2*r2)
+    T_cen = affinity.translate(green_star_cen, xy[0], xy[1])     
+    drawHex_flat_by_width(T_cen, 2*r1, &#x27;green&#x27;, 1.0)
+# end for
+#
+for zig in (zig_A, zig_B, zig_C) :
+    for xy in ((0, 0),
+               (1*r1/2, -1*5*r2), (2*r1/2, -2*5*r2),
+               (3*r1/2, -3*5*r2), (4*r1/2, -4*5*r2),
+               (5*r1/2, -5*5*r2)) :
+        zig_T1 = affinity.translate(zig, -4*r1, 2*r2)
+        zig_T2 = affinity.translate(zig_T1, xy[0], xy[1])
+        xs, ys = zig_T2.xy
+        ax.fill(xs, ys, alpha=1.0, closed=True, 
+            edgecolor=&#x27;none&#x27;, facecolor=&#x27;darkseagreen&#x27;, 
+            fill=True, zorder=15)
+        ax.plot(xs, ys, color=&#x27;black&#x27;, alpha=1.0, linewidth=1.2, solid_capstyle=&#x27;round&#x27;, zorder=25)
+    # end for
+# end for
+#
+plt.savefig(&#x27;./png/fig-18.png&#x27;, format=&quot;png&quot;, dpi=300)
+#
+print(&#x27;done&#x27;)
+print(&#x27;press Stop to exit&#x27;)
+plt.show()</code></pre></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-81ef-9ed6-fc85255f27a2" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-8176-a87f-e33aff532c39" class="link-to-page"><a href="181-BOU-009/Jackie%20Lin_Paper%20for%20Mathematics%20and%20Arts%202d9188db8a4e8176a87fe33aff532c39.html">Jackie Lin_Paper for Mathematics and Arts</a></figure></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-811a-8e14-eb7197d0fc2a" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2d9188db-8a4e-810d-a9c5-e83c19c3c807" class="link-to-page"><a href="181-BOU-009/%E5%89%B5%E4%BD%9C%E7%90%86%E5%BF%B5_%E8%9E%AD%E9%A6%96%E7%82%BA%E6%A2%AF%E7%99%BB%E9%87%91%E9%A0%82%202d9188db8a4e810da9c5e83c19c3c807.html">創作理念_螭首為梯登金頂</a></figure></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-8153-8def-f7e222c0747e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-816a-ba51-df9044eef1b4" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
