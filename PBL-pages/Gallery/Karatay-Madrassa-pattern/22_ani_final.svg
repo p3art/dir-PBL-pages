@@ -1,0 +1,934 @@
+<svg baseProfile="full" height="798" version="1.1" width="798" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon fill="white" points="0,0 798,0 798,798 0,798" stroke="blue"/>
+  <polygon fill="rgb(238, 255, 221)" points="19.0,19.0 779.0,19.0 779.0,779.0 19.0,779.0" stroke="none"/>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" x="360" y="60">
+    0
+    <set attributeName="visibility" begin="1s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    1
+    <set attributeName="visibility" begin="1.01s" to="visible"/>
+    <set attributeName="visibility" begin="2s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    2
+    <set attributeName="visibility" begin="2.01s" to="visible"/>
+    <set attributeName="visibility" begin="3s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    3
+    <set attributeName="visibility" begin="3.01s" to="visible"/>
+    <set attributeName="visibility" begin="4s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    4
+    <set attributeName="visibility" begin="4.01s" to="visible"/>
+    <set attributeName="visibility" begin="5s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    5
+    <set attributeName="visibility" begin="5.01s" to="visible"/>
+    <set attributeName="visibility" begin="6s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    6
+    <set attributeName="visibility" begin="6.01s" to="visible"/>
+    <set attributeName="visibility" begin="7s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    7
+    <set attributeName="visibility" begin="7.01s" to="visible"/>
+    <set attributeName="visibility" begin="8s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    8
+    <set attributeName="visibility" begin="8.01s" to="visible"/>
+    <set attributeName="visibility" begin="9s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    9
+    <set attributeName="visibility" begin="9.01s" to="visible"/>
+    <set attributeName="visibility" begin="10s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    10
+    <set attributeName="visibility" begin="10.01s" to="visible"/>
+    <set attributeName="visibility" begin="11s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    11
+    <set attributeName="visibility" begin="11.01s" to="visible"/>
+    <set attributeName="visibility" begin="12s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    12
+    <set attributeName="visibility" begin="12.01s" to="visible"/>
+    <set attributeName="visibility" begin="13s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    13
+    <set attributeName="visibility" begin="13.01s" to="visible"/>
+    <set attributeName="visibility" begin="14s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    14
+    <set attributeName="visibility" begin="14.01s" to="visible"/>
+    <set attributeName="visibility" begin="15s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    15
+    <set attributeName="visibility" begin="15.01s" to="visible"/>
+    <set attributeName="visibility" begin="16s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    16
+    <set attributeName="visibility" begin="16.01s" to="visible"/>
+    <set attributeName="visibility" begin="17s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    17
+    <set attributeName="visibility" begin="17.01s" to="visible"/>
+    <set attributeName="visibility" begin="18s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    18
+    <set attributeName="visibility" begin="18.01s" to="visible"/>
+    <set attributeName="visibility" begin="19s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    19
+    <set attributeName="visibility" begin="19.01s" to="visible"/>
+    <set attributeName="visibility" begin="20s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    20
+    <set attributeName="visibility" begin="20.01s" to="visible"/>
+    <set attributeName="visibility" begin="21s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    21
+    <set attributeName="visibility" begin="21.01s" to="visible"/>
+    <set attributeName="visibility" begin="22s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    22
+    <set attributeName="visibility" begin="22.01s" to="visible"/>
+    <set attributeName="visibility" begin="23s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    23
+    <set attributeName="visibility" begin="23.01s" to="visible"/>
+    <set attributeName="visibility" begin="24s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    24
+    <set attributeName="visibility" begin="24.01s" to="visible"/>
+    <set attributeName="visibility" begin="25s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    25
+    <set attributeName="visibility" begin="25.01s" to="visible"/>
+    <set attributeName="visibility" begin="26s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    26
+    <set attributeName="visibility" begin="26.01s" to="visible"/>
+    <set attributeName="visibility" begin="27s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    27
+    <set attributeName="visibility" begin="27.01s" to="visible"/>
+    <set attributeName="visibility" begin="28s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    28
+    <set attributeName="visibility" begin="28.01s" to="visible"/>
+    <set attributeName="visibility" begin="29s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    29
+    <set attributeName="visibility" begin="29.01s" to="visible"/>
+    <set attributeName="visibility" begin="30s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    30
+    <set attributeName="visibility" begin="30.01s" to="visible"/>
+    <set attributeName="visibility" begin="31s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    31
+    <set attributeName="visibility" begin="31.01s" to="visible"/>
+    <set attributeName="visibility" begin="32s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    32
+    <set attributeName="visibility" begin="32.01s" to="visible"/>
+    <set attributeName="visibility" begin="33s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    33
+    <set attributeName="visibility" begin="33.01s" to="visible"/>
+    <set attributeName="visibility" begin="34s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    34
+    <set attributeName="visibility" begin="34.01s" to="visible"/>
+    <set attributeName="visibility" begin="35s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    35
+    <set attributeName="visibility" begin="35.01s" to="visible"/>
+    <set attributeName="visibility" begin="36s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    36
+    <set attributeName="visibility" begin="36.01s" to="visible"/>
+    <set attributeName="visibility" begin="37s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    37
+    <set attributeName="visibility" begin="37.01s" to="visible"/>
+    <set attributeName="visibility" begin="38s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    38
+    <set attributeName="visibility" begin="38.01s" to="visible"/>
+    <set attributeName="visibility" begin="39s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    39
+    <set attributeName="visibility" begin="39.01s" to="visible"/>
+    <set attributeName="visibility" begin="40s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    40
+    <set attributeName="visibility" begin="40.01s" to="visible"/>
+    <set attributeName="visibility" begin="41s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    41
+    <set attributeName="visibility" begin="41.01s" to="visible"/>
+    <set attributeName="visibility" begin="42s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    42
+    <set attributeName="visibility" begin="42.01s" to="visible"/>
+    <set attributeName="visibility" begin="43s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    43
+    <set attributeName="visibility" begin="43.01s" to="visible"/>
+    <set attributeName="visibility" begin="44s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    44
+    <set attributeName="visibility" begin="44.01s" to="visible"/>
+    <set attributeName="visibility" begin="45s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    45
+    <set attributeName="visibility" begin="45.01s" to="visible"/>
+    <set attributeName="visibility" begin="46s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    46
+    <set attributeName="visibility" begin="46.01s" to="visible"/>
+    <set attributeName="visibility" begin="47s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    47
+    <set attributeName="visibility" begin="47.01s" to="visible"/>
+    <set attributeName="visibility" begin="48s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    48
+    <set attributeName="visibility" begin="48.01s" to="visible"/>
+    <set attributeName="visibility" begin="49s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    49
+    <set attributeName="visibility" begin="49.01s" to="visible"/>
+    <set attributeName="visibility" begin="50s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    50
+    <set attributeName="visibility" begin="50.01s" to="visible"/>
+    <set attributeName="visibility" begin="51s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    51
+    <set attributeName="visibility" begin="51.01s" to="visible"/>
+    <set attributeName="visibility" begin="52s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    52
+    <set attributeName="visibility" begin="52.01s" to="visible"/>
+    <set attributeName="visibility" begin="53s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    53
+    <set attributeName="visibility" begin="53.01s" to="visible"/>
+    <set attributeName="visibility" begin="54s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    54
+    <set attributeName="visibility" begin="54.01s" to="visible"/>
+    <set attributeName="visibility" begin="55s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    55
+    <set attributeName="visibility" begin="55.01s" to="visible"/>
+    <set attributeName="visibility" begin="56s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    56
+    <set attributeName="visibility" begin="56.01s" to="visible"/>
+    <set attributeName="visibility" begin="57s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    57
+    <set attributeName="visibility" begin="57.01s" to="visible"/>
+    <set attributeName="visibility" begin="58s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    58
+    <set attributeName="visibility" begin="58.01s" to="visible"/>
+    <set attributeName="visibility" begin="59s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    59
+    <set attributeName="visibility" begin="59.01s" to="visible"/>
+    <set attributeName="visibility" begin="60s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    60
+    <set attributeName="visibility" begin="60.01s" to="visible"/>
+    <set attributeName="visibility" begin="61s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    61
+    <set attributeName="visibility" begin="61.01s" to="visible"/>
+    <set attributeName="visibility" begin="62s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    62
+    <set attributeName="visibility" begin="62.01s" to="visible"/>
+    <set attributeName="visibility" begin="63s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    63
+    <set attributeName="visibility" begin="63.01s" to="visible"/>
+    <set attributeName="visibility" begin="64s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    64
+    <set attributeName="visibility" begin="64.01s" to="visible"/>
+    <set attributeName="visibility" begin="65s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    65
+    <set attributeName="visibility" begin="65.01s" to="visible"/>
+    <set attributeName="visibility" begin="66s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    66
+    <set attributeName="visibility" begin="66.01s" to="visible"/>
+    <set attributeName="visibility" begin="67s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    67
+    <set attributeName="visibility" begin="67.01s" to="visible"/>
+    <set attributeName="visibility" begin="68s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    68
+    <set attributeName="visibility" begin="68.01s" to="visible"/>
+    <set attributeName="visibility" begin="69s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    69
+    <set attributeName="visibility" begin="69.01s" to="visible"/>
+    <set attributeName="visibility" begin="70s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    70
+    <set attributeName="visibility" begin="70.01s" to="visible"/>
+    <set attributeName="visibility" begin="71s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    71
+    <set attributeName="visibility" begin="71.01s" to="visible"/>
+    <set attributeName="visibility" begin="72s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    72
+    <set attributeName="visibility" begin="72.01s" to="visible"/>
+    <set attributeName="visibility" begin="73s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    73
+    <set attributeName="visibility" begin="73.01s" to="visible"/>
+    <set attributeName="visibility" begin="74s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    74
+    <set attributeName="visibility" begin="74.01s" to="visible"/>
+    <set attributeName="visibility" begin="75s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    75
+    <set attributeName="visibility" begin="75.01s" to="visible"/>
+    <set attributeName="visibility" begin="76s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    76
+    <set attributeName="visibility" begin="76.01s" to="visible"/>
+    <set attributeName="visibility" begin="77s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    77
+    <set attributeName="visibility" begin="77.01s" to="visible"/>
+    <set attributeName="visibility" begin="78s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    78
+    <set attributeName="visibility" begin="78.01s" to="visible"/>
+    <set attributeName="visibility" begin="79s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    79
+    <set attributeName="visibility" begin="79.01s" to="visible"/>
+    <set attributeName="visibility" begin="80s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    80
+    <set attributeName="visibility" begin="80.01s" to="visible"/>
+    <set attributeName="visibility" begin="81s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    81
+    <set attributeName="visibility" begin="81.01s" to="visible"/>
+    <set attributeName="visibility" begin="82s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    82
+    <set attributeName="visibility" begin="82.01s" to="visible"/>
+    <set attributeName="visibility" begin="83s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    83
+    <set attributeName="visibility" begin="83.01s" to="visible"/>
+    <set attributeName="visibility" begin="84s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    84
+    <set attributeName="visibility" begin="84.01s" to="visible"/>
+    <set attributeName="visibility" begin="85s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    85
+    <set attributeName="visibility" begin="85.01s" to="visible"/>
+    <set attributeName="visibility" begin="86s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    86
+    <set attributeName="visibility" begin="86.01s" to="visible"/>
+    <set attributeName="visibility" begin="87s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    87
+    <set attributeName="visibility" begin="87.01s" to="visible"/>
+    <set attributeName="visibility" begin="88s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    88
+    <set attributeName="visibility" begin="88.01s" to="visible"/>
+    <set attributeName="visibility" begin="89s" to="hidden"/>
+  </text>
+  <text fill="magenta" font-family="Microsoft JhengHei" font-size="48px" stroke-width="3" visibility="hidden" x="360" y="60">
+    89
+    <set attributeName="visibility" begin="89.01s" to="visible"/>
+  </text>
+  <defs>
+    <g id="big_square">
+      <polyline fill="none" points="133.0,133.0 665.0,133.0 665.0,665.0 133.0,665.0 133.0,133.0" stroke="magenta" stroke-width="1.3"/>
+    </g>
+    <g id="HV_line">
+      <line stroke="rgb(128,0,64)" stroke-width="0.3" x1="0" x2="798" y1="399.0" y2="399.0"/>
+      <line stroke="rgb(128,0,64)" stroke-width="0.3" x1="399.0" x2="399.0" y1="0" y2="798"/>
+    </g>
+    <g id="CIR_1">
+      <circle cx="266.0" cy="532.0" fill="none" r="133.0" stroke="black" stroke-width="0.3"/>
+    </g>
+    <g id="CIR_2">
+      <path d="M 343.9095962043783, 399.0 a 55.090403795621654,55.090403795621654 0 1,0 110.18080759124331,0 a 55.090403795621654,55.090403795621654 0 1,0 -110.18080759124331,0" fill="none"/>
+    </g>
+    <g id="pointer">
+      <line stroke="blue" stroke-width="1.0" x1="399.0" x2="437.9547981021892" y1="399.0" y2="437.9547981021892"/>
+      <circle cx="437.9547981021892" cy="437.9547981021892" fill="red" r="2" stroke="none"/>
+    </g>
+    <g id="CIR_4">
+      <circle cx="399.0" cy="399.0" fill="none" r="19.477399051094565" stroke="green" stroke-width="0.5"/>
+    </g>
+    <g id="OCT_1">
+      <polyline fill="none" points="399.0,532.0 360.04520189781084,626.0452018978108 266.0,665.0 171.9547981021892,626.0452018978108 133.0,532.0 171.95479810218916,437.9547981021892 266.0,399.0 360.0452018978108,437.95479810218916 399.0,532.0" stroke-linejoin="bevel" stroke-width="0.3"/>
+    </g>
+    <g id="OCT_2">
+      <polyline fill="none" points="399.0,532.0 360.04520189781084,626.0452018978108 266.0,665.0 171.9547981021892,626.0452018978108 133.0,532.0 171.95479810218916,437.9547981021892 266.0,399.0 360.0452018978108,437.95479810218916 399.0,532.0" stroke-linejoin="bevel" stroke-width="0.3"/>
+      <animate attributeName="stroke" begin="3.0s" dur="1s" from="red" repeatCount="1" to="red"/>
+    </g>
+    <g id="OCT_3">
+      <polyline fill="none" points="399.0,532.0 360.04520189781084,626.0452018978108 266.0,665.0 171.9547981021892,626.0452018978108 133.0,532.0 171.95479810218916,437.9547981021892 266.0,399.0 360.0452018978108,437.95479810218916 399.0,532.0" stroke-linejoin="bevel" stroke-width="0.3"/>
+      <animate attributeName="stroke" begin="4.0s" dur="1.5s" from="red" repeatCount="1" to="red"/>
+    </g>
+    <g id="OCT_4">
+      <polyline fill="none" points="399.0,532.0 360.04520189781084,626.0452018978108 266.0,665.0 171.9547981021892,626.0452018978108 133.0,532.0 171.95479810218916,437.9547981021892 266.0,399.0 360.0452018978108,437.95479810218916 399.0,532.0" stroke-linejoin="bevel" stroke-width="0.3"/>
+      <animate attributeName="stroke" begin="5.5s" dur="2s" from="red" repeatCount="1" to="red"/>
+    </g>
+    <g id="small_oct">
+      <polyline fill="none" points="454.0904037956217,399.0 437.9547981021892,437.9547981021892 399.0,454.0904037956217 360.0452018978108,437.9547981021892 343.9095962043783,399.0 360.0452018978108,360.0452018978108 399.0,343.9095962043783 437.95479810218916,360.0452018978108 454.0904037956217,399.0" stroke="green" stroke-linejoin="bevel" stroke-width="0.5"/>
+    </g>
+    <g id="pink_small_oct">
+      <polygon fill="lightpink" points="454.0904037956217,399.0 437.9547981021892,437.9547981021892 399.0,454.0904037956217 360.0452018978108,437.9547981021892 343.9095962043783,399.0 360.0452018978108,360.0452018978108 399.0,343.9095962043783 437.95479810218916,360.0452018978108 454.0904037956217,399.0" stroke="none"/>
+    </g>
+    <g id="fan_line_green">
+      <line stroke-width="0.5" x1="570.9547981021892" x2="458.00555824816115" y1="415.13560569343247" y2="142.45201897810796"/>
+      <line stroke-width="0.5" x1="493.04520189781084" x2="605.9944417518382" y1="415.13560569343247" y2="142.45201897810796"/>
+    </g>
+    <g id="fan_line_red">
+      <line stroke-width="0.5" x1="570.9547981021892" x2="458.00555824816115" y1="415.13560569343247" y2="142.45201897810796"/>
+      <line stroke-width="0.5" x1="493.04520189781084" x2="605.9944417518382" y1="415.13560569343247" y2="142.45201897810796"/>
+    </g>
+    <g id="fan_line_black">
+      <line stroke="black" stroke-width="0.6" x1="532.0" x2="437.9547981021892" y1="399.0" y2="360.04520189781084"/>
+    </g>
+    <g id="poly_fan">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_1">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_2">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_3">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_4">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_5">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_6">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_7">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_8">
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+    </g>
+    <g id="poly_fan_g">
+      <polygon points="531.9999999999998,288.81919240875686 520.5904037956215,293.54520189781095 515.8643943065673,282.1356056934327 504.454798102189,277.4095962043783 509.1808075912429,266.0 504.45479810218905,254.59040379562146 515.8643943065673,249.8643943065673 520.5904037956217,238.45479810218896 532.0,243.18080759124294 543.4095962043785,238.45479810218905 548.1356056934327,249.8643943065673 559.5452018978111,254.59040379562168 554.8191924087571,266.0 559.545201897811,277.40959620437854 548.1356056934327,282.1356056934327 543.4095962043784,293.545201897811" stroke="none"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate( 45,532.0, 266.0)"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate( 90,532.0, 266.0)"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate(135,532.0, 266.0)"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate(180,532.0, 266.0)"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate(225,532.0, 266.0)"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate(270,532.0, 266.0)"/>
+      <polygon points="504.4547981021892,387.5904037956216 531.9999999999999,321.0904037956219 520.5904037956215,293.54520189781095 493.0452018978105,304.9547981021894 465.5,371.45479810218916 504.4547981021892,387.5904037956216" stroke="none" transform="rotate(315,532.0, 266.0)"/>
+    </g>
+    <g id="line_g">
+      <line stroke="black" stroke-width="0.5" x1="454.0904037956217" x2="399.0" y1="399.0" y2="454.0904037956217"/>
+      <line stroke="black" stroke-width="0.5" x1="437.9547981021892" x2="399.0" y1="437.9547981021892" y2="399.0"/>
+      <line stroke="black" stroke-width="0.5" x1="426.54520189781084" x2="399.0" y1="399.0" y2="426.54520189781084"/>
+      <polyline fill="none" points="426.54520189781084,399.0 426.54520189781084,426.54520189781084 399.0,426.54520189781084 399.0,399.0 426.54520189781084,399.0" stroke="red" stroke-width="0.5"/>
+    </g>
+    <g id="star">
+      <polyline points="418.47739905109455,399.0 412.7726009489054,404.70479810218916 412.7726009489054,412.7726009489054 404.70479810218916,412.77260094890545 399.0,418.47739905109455 393.29520189781084,412.7726009489054 385.2273990510946,412.7726009489054 385.2273990510945,404.70479810218916 379.52260094890545,399.0 385.2273990510946,393.29520189781084 385.2273990510946,385.2273990510946 393.2952018978109,385.2273990510946 399.0,379.52260094890545 404.70479810218916,385.2273990510946 412.7726009489054,385.2273990510946 412.7726009489054,393.29520189781084 418.47739905109455,399.0"/>
+    </g>
+    <g id="poly_star">
+      <polygon points="531.9999999999998,288.81919240875686 520.5904037956215,293.54520189781095 515.8643943065673,282.1356056934327 504.454798102189,277.4095962043783 509.1808075912429,266.0 504.45479810218905,254.59040379562146 515.8643943065673,249.8643943065673 520.5904037956217,238.45479810218896 532.0,243.18080759124294 543.4095962043785,238.45479810218905 548.1356056934327,249.8643943065673 559.5452018978111,254.59040379562168 554.8191924087571,266.0 559.545201897811,277.40959620437854 548.1356056934327,282.1356056934327 543.4095962043784,293.545201897811" stroke="none"/>
+    </g>
+    <g id="poly_1_lines">
+      <line stroke="blue" stroke-width="0.5" x1="399.0" x2="360.0452018978109" y1="418.47739905109455" y2="457.43219715328365"/>
+      <line stroke="blue" stroke-width="0.5" x1="379.52260094890545" x2="340.56780284671635" y1="399.0" y2="437.9547981021891"/>
+      <line stroke="red" stroke-width="0.5" x1="385.2273990510946" x2="330.13699525547304" y1="412.77260094890545" y2="412.77260094890545"/>
+      <line stroke="red" stroke-width="0.5" transform="rotate(-45,399.0,399.0)" x1="379.52260094890545" x2="340.56780284671635" y1="399.0" y2="437.9547981021891"/>
+    </g>
+    <g id="poly_1">
+      <polyline points="373.8178028467162,443.6595962043784 360.0452018978108,437.9547981021892 354.3404037956216,424.1821971532838 365.75,412.77260094890545 385.2273990510946,412.7726009489054 385.22739905109466,432.25 373.8178028467162,443.6595962043784"/>
+    </g>
+    <g id="poly_g">
+      <polyline points="418.47739905109455,399.0 412.7726009489054,404.70479810218916 412.7726009489054,412.7726009489054 404.70479810218916,412.77260094890545 399.0,418.47739905109455 393.29520189781084,412.7726009489054 385.2273990510946,412.7726009489054 385.2273990510945,404.70479810218916 379.52260094890545,399.0 385.2273990510946,393.29520189781084 385.2273990510946,385.2273990510946 393.2952018978109,385.2273990510946 399.0,379.52260094890545 404.70479810218916,385.2273990510946 412.7726009489054,385.2273990510946 412.7726009489054,393.29520189781084 418.47739905109455,399.0"/>
+      <polyline points="373.8178028467162,443.6595962043784 360.0452018978108,437.9547981021892 354.3404037956216,424.1821971532838 365.75,412.77260094890545 385.2273990510946,412.7726009489054 385.22739905109466,432.25 373.8178028467162,443.6595962043784"/>
+      <polyline points="349.6143943065675,412.77260094890545 343.90959620437826,399.00000000000006 349.6143943065675,385.22739905109466 365.74999999999994,385.22739905109466 379.52260094890545,399.00000000000006 365.75,412.77260094890545 349.6143943065675,412.77260094890545"/>
+      <polyline points="354.3404037956216,373.8178028467162 360.0452018978108,360.0452018978108 373.8178028467162,354.3404037956216 385.22739905109455,365.75 385.2273990510946,385.2273990510946 365.75,385.22739905109466 354.3404037956216,373.8178028467162"/>
+      <polyline points="385.2273990510945,349.6143943065675 398.9999999999999,343.90959620437826 412.7726009489053,349.6143943065675 412.7726009489053,365.74999999999994 398.9999999999999,379.52260094890545 385.2273990510945,365.75 385.2273990510945,349.6143943065675"/>
+      <polyline points="424.1821971532838,354.3404037956216 437.9547981021892,360.0452018978108 443.6595962043784,373.8178028467162 432.25,385.22739905109455 412.7726009489054,385.2273990510946 412.77260094890534,365.75 424.1821971532838,354.3404037956216"/>
+      <polyline points="448.38560569343264,385.2273990510946 454.0904037956218,399.0 448.3856056934326,412.7726009489054 432.2500000000001,412.7726009489054 418.47739905109466,399.0 432.25000000000006,385.2273990510945 448.38560569343264,385.2273990510946"/>
+      <polyline points="443.6595962043784,424.1821971532838 437.9547981021892,437.9547981021892 424.1821971532838,443.6595962043784 412.77260094890545,432.25 412.7726009489054,412.7726009489054 432.25,412.77260094890534 443.6595962043784,424.1821971532838"/>
+      <polyline points="412.7726009489054,448.3856056934326 399.0,454.09040379562174 385.2273990510946,448.3856056934326 385.2273990510946,432.25000000000006 399.0,418.4773990510946 412.7726009489054,432.25 412.7726009489054,448.3856056934326"/>
+    </g>
+    <g id="box">
+      <polygon fill="none" points="266.0,266.0 266.0,133.0 133.0,133.0 133.0,266.0" stroke="red" stroke-linejoin="bevel" stroke-width="0.5"/>
+      <line stroke="red" stroke-width="0.5" x1="133.0" x2="266.0" y1="133.0" y2="266.0"/>
+    </g>
+    <g id="key1_set">
+      <line stroke="green" stroke-width="0.3" x1="189.76130047445264" x2="231.7712113868649" y1="164.57910332116904" y2="266.0"/>
+      <line stroke="green" stroke-width="0.3" x1="207.56780284671612" x2="266.0000000000001" y1="207.56780284671612" y2="231.77121138686485"/>
+      <line stroke="green" stroke-width="0.3" transform="rotate(45, 266.0, 266.0)" x1="207.56780284671612" x2="231.7712113868649" y1="207.56780284671612" y2="266.0"/>
+      <circle cx="199.49999999999994" cy="160.54520189781093" fill="none" r="10.541092407443676" stroke="darkgreen" stroke-width="0.3"/>
+    </g>
+    <g id="zig_A">
+      <polyline fill="none" points="209.23869952554725,156.5113004744528 213.51130047445267,166.82627163190838 223.25,162.79237020855024 227.52260094890542,173.1073413660058 237.26130047445275,169.07343994264767 232.98869952554733,158.7584687851921 242.72739905109464,154.72456736183395 266.00000000000006,210.90959620437803" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="199.49999999999994,160.54520189781093 212.31780284671618,191.49011537017765 222.05650237226348,187.45621394681953 217.7839014233581,177.14124278936396 227.52260094890542,173.1073413660058 231.79520189781084,183.4223125234614 241.53390142335815,179.38841110010324 245.80650237226357,189.70338225755881 236.06780284671623,193.73728368091696 240.34040379562165,204.05225483837253 230.60170427007432,208.08615626173068 226.3291033211689,197.7711851042751 216.5904037956216,201.80508652763322 227.04520189781067,227.04520189781059" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 244.61300474452707,214.3672259958281 234.87430521897974,218.40112741918625 266.0,231.77121138686488" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 250.079103321169,200.0183534150144 254.3517042700744,210.33332457246996 241.7965914598513,241.7965914598512" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="zig_A1">
+      <polyline fill="none" points="209.23869952554725,156.5113004744528 213.51130047445267,166.82627163190838 223.25,162.79237020855024 227.52260094890542,173.1073413660058 237.26130047445275,169.07343994264767 232.98869952554733,158.7584687851921 242.72739905109464,154.72456736183395 266.00000000000006,210.90959620437803" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="zig_A2">
+      <polyline fill="none" points="199.49999999999994,160.54520189781093 212.31780284671618,191.49011537017765 222.05650237226348,187.45621394681953 217.7839014233581,177.14124278936396 227.52260094890542,173.1073413660058 231.79520189781084,183.4223125234614 241.53390142335815,179.38841110010324 245.80650237226357,189.70338225755881 236.06780284671623,193.73728368091696 240.34040379562165,204.05225483837253 230.60170427007432,208.08615626173068 226.3291033211689,197.7711851042751 216.5904037956216,201.80508652763322 227.04520189781067,227.04520189781059" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="zig_A3">
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 244.61300474452707,214.3672259958281 234.87430521897974,218.40112741918625 266.0,231.77121138686488" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="zig_A4">
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 250.079103321169,200.0183534150144 254.3517042700744,210.33332457246996 241.7965914598513,241.7965914598512" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="zig_567">
+      <polyline fill="none" points="266.0,133.0 171.95479810218922,171.9547981021892 133.0,266.0" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="243.18080759124294,266.0 227.0452018978106,227.0452018978105 266.0,243.1808075912429" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="210.9095962043781,265.9999999999999 249.8643943065673,249.8643943065673 266.00000000000006,210.90959620437803" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="kite_w">
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 194.03390142335806,174.89407447862462 180.50000000000006,180.50000000000006 174.89407447862465,194.0339014233581 207.56780284671612,207.56780284671612" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="kite_p1">
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 194.03390142335806,174.89407447862462 180.50000000000006,180.50000000000006" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="kite_p2">
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 174.89407447862465,194.0339014233581 180.50000000000006,180.50000000000006" stroke="blue" stroke-width="0.6"/>
+    </g>
+    <g id="motif">
+      <polyline fill="none" points="209.23869952554725,156.5113004744528 213.51130047445267,166.82627163190838 223.25,162.79237020855024 227.52260094890542,173.1073413660058 237.26130047445275,169.07343994264767 232.98869952554733,158.7584687851921 242.72739905109464,154.72456736183395 266.00000000000006,210.90959620437803" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="199.49999999999994,160.54520189781093 212.31780284671618,191.49011537017765 222.05650237226348,187.45621394681953 217.7839014233581,177.14124278936396 227.52260094890542,173.1073413660058 231.79520189781084,183.4223125234614 241.53390142335815,179.38841110010324 245.80650237226357,189.70338225755881 236.06780284671623,193.73728368091696 240.34040379562165,204.05225483837253 230.60170427007432,208.08615626173068 226.3291033211689,197.7711851042751 216.5904037956216,201.80508652763322 227.04520189781067,227.04520189781059" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 244.61300474452707,214.3672259958281 234.87430521897974,218.40112741918625 266.0,231.77121138686488" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 250.079103321169,200.0183534150144 254.3517042700744,210.33332457246996 241.7965914598513,241.7965914598512" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="209.23869952554725,156.5113004744528 213.51130047445267,166.82627163190838 223.25,162.79237020855024 227.52260094890542,173.1073413660058 237.26130047445275,169.07343994264767 232.98869952554733,158.7584687851921 242.72739905109464,154.72456736183395 266.00000000000006,210.90959620437803" stroke="blue" stroke-width="0.6" transform="rotate(-45, 266.0, 266.0)"/>
+      <polyline fill="none" points="199.49999999999994,160.54520189781093 212.31780284671618,191.49011537017765 222.05650237226348,187.45621394681953 217.7839014233581,177.14124278936396 227.52260094890542,173.1073413660058 231.79520189781084,183.4223125234614 241.53390142335815,179.38841110010324 245.80650237226357,189.70338225755881 236.06780284671623,193.73728368091696 240.34040379562165,204.05225483837253 230.60170427007432,208.08615626173068 226.3291033211689,197.7711851042751 216.5904037956216,201.80508652763322 227.04520189781067,227.04520189781059" stroke="blue" stroke-width="0.6" transform="rotate(-45, 266.0, 266.0)"/>
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 244.61300474452707,214.3672259958281 234.87430521897974,218.40112741918625 266.0,231.77121138686488" stroke="blue" stroke-width="0.6" transform="rotate(-45, 266.0, 266.0)"/>
+      <polyline fill="none" points="240.34040379562165,204.05225483837253 250.079103321169,200.0183534150144 254.3517042700744,210.33332457246996 241.7965914598513,241.7965914598512" stroke="blue" stroke-width="0.6" transform="rotate(-45, 266.0, 266.0)"/>
+      <polyline fill="none" points="266.0,133.0 171.95479810218922,171.9547981021892 133.0,266.0" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="243.18080759124294,266.0 227.0452018978106,227.0452018978105 266.0,243.1808075912429" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="210.9095962043781,265.9999999999999 249.8643943065673,249.8643943065673 266.00000000000006,210.90959620437803" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 194.03390142335806,174.89407447862462 180.50000000000006,180.50000000000006 174.89407447862465,194.0339014233581 207.56780284671612,207.56780284671612" stroke="blue" stroke-width="0.6"/>
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 194.03390142335806,174.89407447862462 180.50000000000006,180.50000000000006" stroke="blue" stroke-width="0.6" transform="rotate(-45, 266.0, 266.0)"/>
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 174.89407447862465,194.0339014233581 180.50000000000006,180.50000000000006" stroke="blue" stroke-width="0.6" transform="rotate(45, 266.0, 266.0)"/>
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 194.03390142335806,174.89407447862462 180.50000000000006,180.50000000000006" stroke="blue" stroke-width="0.6" transform="rotate(45, 133, 133)"/>
+      <polyline fill="none" points="207.56780284671612,207.56780284671612 174.89407447862465,194.0339014233581 180.50000000000006,180.50000000000006" stroke="blue" stroke-width="0.6" transform="rotate(-45, 133, 133)"/>
+      <polyline fill="none" points="152.47739905109455,133.0 146.7726009489054,138.70479810218916 146.7726009489055,182.38560569343252 133.0000000000001,188.09040379562174 160.5452018978109,199.4999999999999" stroke="blue" stroke-linejoin="bevel" stroke-width="0.6"/>
+      <polyline fill="none" points="133.0,152.47739905109455 138.7047981021891,146.7726009489054 182.38560569343252,146.77260094890534 188.09040379562174,132.99999999999994 199.49999999999994,160.54520189781093" stroke="blue" stroke-linejoin="bevel" stroke-width="0.6"/>
+      <polyline fill="none" points="152.47739905109455,133.0 177.65959620437837,158.18219715328382 171.95479810218922,171.95479810218922 158.18219715328382,177.65959620437837 133.0,152.47739905109455" stroke="blue" stroke-linejoin="bevel" stroke-width="0.6"/>
+    </g>
+    <g id="motif_set_1">
+      <use xlink:href="#motif"/>
+      <use transform="rotate( 90, 266.0, 266.0)" xlink:href="#motif"/>
+      <use transform="rotate(180, 266.0, 266.0)" xlink:href="#motif"/>
+      <use transform="rotate(270, 266.0, 266.0)" xlink:href="#motif"/>
+    </g>
+    <g id="motif_123">
+      <polyline fill="none" points="152.47739905109455,133.0 146.7726009489054,138.70479810218916 146.7726009489055,182.38560569343252 133.0000000000001,188.09040379562174 160.5452018978109,199.4999999999999" stroke="blue" stroke-linejoin="bevel" stroke-width="0.6"/>
+      <polyline fill="none" points="133.0,152.47739905109455 138.7047981021891,146.7726009489054 182.38560569343252,146.77260094890534 188.09040379562174,132.99999999999994 199.49999999999994,160.54520189781093" stroke="blue" stroke-linejoin="bevel" stroke-width="0.6"/>
+      <polyline fill="none" points="152.47739905109455,133.0 177.65959620437837,158.18219715328382 171.95479810218922,171.95479810218922 158.18219715328382,177.65959620437837 133.0,152.47739905109455" stroke="blue" stroke-linejoin="bevel" stroke-width="0.6"/>
+    </g>
+    <g id="grid_lines">
+      <line fill="none" stroke="black" stroke-width="0.2" x1="199.49999999999994" x2="238.45479810218922" y1="160.54520189781093" y2="144.40959620437837"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="203.77260094890536" x2="242.72739905109464" y1="170.8601730552665" y2="154.72456736183395"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="208.04520189781078" x2="247.00000000000006" y1="181.17514421272207" y2="165.03953851928952"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="212.31780284671618" x2="251.27260094890545" y1="191.49011537017765" y2="175.3545096767451"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="216.5904037956216" x2="255.54520189781087" y1="201.80508652763322" y2="185.66948083420067"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="220.86300474452702" x2="259.8178028467163" y1="212.1200576850888" y2="195.98445199165624"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="225.13560569343244" x2="264.0904037956217" y1="222.43502884254437" y2="206.29942314911182"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="239.14690616788516" x2="258.6243052189798" y1="228.71609857664183" y2="220.64829572992554"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="199.49999999999994" x2="225.13560569343244" y1="160.54520189781093" y2="222.43502884254437"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="209.23869952554725" x2="239.14690616788516" y1="156.5113004744528" y2="228.71609857664183"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="218.97739905109458" x2="248.8856056934325" y1="152.47739905109466" y2="224.68219715328368"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="228.7160985766419" x2="258.6243052189798" y1="148.44349762773652" y2="220.64829572992554"/>
+      <line fill="none" stroke="black" stroke-width="0.2" x1="238.45479810218922" x2="264.0904037956217" y1="144.40959620437837" y2="206.29942314911182"/>
+    </g>
+  </defs>
+  <use x="798" xlink:href="#HV_line" y="0">
+    <animateTransform attributeName="transform" begin="0.0s" dur="2s" fill="freeze" from="0,0" repeatCount="1" to="-798,0" type="translate"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use x="798" xlink:href="#CIR_1" y="0">
+    <animateTransform attributeName="transform" begin="0.0s" dur="2s" fill="freeze" from="0,0" repeatCount="1" to="-798,0" type="translate"/>
+    <set attributeName="visibility" begin="8.5s" to="hidden"/>
+  </use>
+  <use stroke="red" stroke-width="0.5" visibility="hidden" xlink:href="#CIR_2">
+    <set attributeName="visibility" begin="12.0s" to="visible"/>
+    <set attributeName="visibility" begin="18.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#pointer">
+    <set attributeName="visibility" begin="9.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="9.5s" dur="2s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="360,399.0,399.0" type="rotate"/>
+    <set attributeName="visibility" begin="12.5s" to="hidden"/>
+  </use>
+  <use stroke="black" x="798" xlink:href="#OCT_1" y="0">
+    <animateTransform attributeName="transform" begin="0.0s" dur="2s" fill="freeze" from="0,0" repeatCount="1" to="-798,0" type="translate"/>
+    <set attributeName="visibility" begin="80.5s" to="hidden"/>
+  </use>
+  <use stroke="black" visibility="hidden" x="0" xlink:href="#OCT_2" y="0">
+    <set attributeName="visibility" begin="3.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="3.0s" dur="1s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="90,399.0,399.0" type="rotate"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use stroke="black" visibility="hidden" x="0" xlink:href="#OCT_3" y="0">
+    <set attributeName="visibility" begin="4.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="4.0s" dur="1.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="180,399.0,399.0" type="rotate"/>
+    <set attributeName="visibility" begin="80.5s" to="hidden"/>
+  </use>
+  <use stroke="black" visibility="hidden" x="0" xlink:href="#OCT_4" y="0">
+    <set attributeName="visibility" begin="5.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="5.5s" dur="2s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="270,399.0,399.0" type="rotate"/>
+    <set attributeName="visibility" begin="80.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#CIR_4">
+    <set attributeName="visibility" begin="14.5s" to="visible"/>
+    <set attributeName="visibility" begin="16.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#small_oct">
+    <set attributeName="visibility" begin="13.0s" to="visible"/>
+    <set attributeName="visibility" begin="25.0s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#line_g">
+    <set attributeName="visibility" begin="13.5s" to="visible"/>
+    <set attributeName="visibility" begin="17.5s" to="hidden"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#star">
+    <set attributeName="visibility" begin="15.5s" to="visible"/>
+  </use>
+  <use visibility="hidden" xlink:href="#poly_1_lines"/>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="0.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="45,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="1.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="90,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="1.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="135,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="2.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="180,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="2.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="225,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="3.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="270,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_1">
+    <set attributeName="visibility" begin="19.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="20.5s" dur="3.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="315,399.0,399.0" type="rotate"/>
+    <animate attributeName="fill" begin="20.5s" dur="3.5s" from="coral" repeatCount="1" to="coral"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="25.5s" dur="1.0s" fill="freeze" from="0,266.0,532.0" repeatCount="1" to="180,266.0,532.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="25.5s" dur="1.5s" fill="freeze" from="0,266.0,532.0" repeatCount="1" to="270,266.0,532.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="27.5s" dur="1.0s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="180,266.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="27.5s" dur="1.5s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="270,266.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="29.5s" dur="1.0s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="180,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="29.5s" dur="1.5s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="270,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="31.5s" dur="1.0s" fill="freeze" from="0,532.0,532.0" repeatCount="1" to="180,532.0,532.0" type="rotate"/>
+  </use>
+  <use fill="rgb(220,238,250)" visibility="hidden" xlink:href="#poly_g">
+    <set attributeName="visibility" begin="25.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="31.5s" dur="1.5s" fill="freeze" from="0,532.0,532.0" repeatCount="1" to="270,532.0,532.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#pink_small_oct">
+    <set attributeName="visibility" begin="34.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="34.5s" dur="1.0s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="-45,532.0,266.0" type="rotate"/>
+    <set attributeName="visibility" begin="42.5s" to="hidden"/>
+  </use>
+  <use stroke="green" visibility="hidden" xlink:href="#fan_line_green">
+    <set attributeName="visibility" begin="36.5s" to="visible"/>
+    <set attributeName="visibility" begin="43.5s" to="hidden"/>
+  </use>
+  <use stroke="red" visibility="hidden" xlink:href="#fan_line_red">
+    <set attributeName="visibility" begin="37.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="37.5s" dur="1.0s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="45,532.0,266.0" type="rotate"/>
+    <set attributeName="visibility" begin="43.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#fan_line_black">
+    <set attributeName="visibility" begin="39.5s" to="visible"/>
+    <set attributeName="visibility" begin="43.5s" to="hidden"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan">
+    <set attributeName="visibility" begin="40.5s" to="visible"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_star">
+    <set attributeName="visibility" begin="41.5s" to="visible"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_1">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="0.5s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="45,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_2">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="1.0s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="90,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_3">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="1.5s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="135,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_4">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="2.0s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="180,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_5">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="2.5s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="225,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_6">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="3.0s" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="270,532.0,266.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_7">
+    <set attributeName="visibility" begin="43.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="44.5s" dur="3.5" fill="freeze" from="0,532.0,266.0" repeatCount="1" to="315,532.0,266.0" type="rotate"/>
+    <animate attributeName="fill" begin="44.5s" dur="3.5s" from="coral" repeatCount="1" to="coral"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_g">
+    <set attributeName="visibility" begin="48.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="49.0s" dur="1.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="90,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_g">
+    <set attributeName="visibility" begin="48.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="49.0s" dur="3.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="180,399.0,399.0" type="rotate"/>
+  </use>
+  <use fill="rgb(255,255,128)" visibility="hidden" xlink:href="#poly_fan_g">
+    <set attributeName="visibility" begin="48.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="49.0s" dur="4.5s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="270,399.0,399.0" type="rotate"/>
+    <animate attributeName="fill" begin="49.0s" dur="4.5s" from="coral" repeatCount="1" to="coral"/>
+  </use>
+  <use visibility="hidden" xlink:href="#box">
+    <set attributeName="visibility" begin="54.5s" to="visible"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#key1_set">
+    <set attributeName="visibility" begin="55.5s" to="visible"/>
+    <set attributeName="visibility" begin="66.0s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_A">
+    <set attributeName="visibility" begin="72.5s" to="visible"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_A">
+    <set attributeName="visibility" begin="61.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="62.5s" dur="1.5s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="-45,266.0,266.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_567">
+    <set attributeName="visibility" begin="65.0s" to="visible"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_A1">
+    <set attributeName="visibility" begin="57.5s" to="visible"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_A2">
+    <set attributeName="visibility" begin="58.5s" to="visible"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_A3">
+    <set attributeName="visibility" begin="59.5s" to="visible"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#zig_A4">
+    <set attributeName="visibility" begin="60.5s" to="visible"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+  <use visibility="hidden" xlink:href="#kite_w">
+    <set attributeName="visibility" begin="66.5s" to="visible"/>
+  </use>
+  <use visibility="hidden" xlink:href="#kite_p1">
+    <set attributeName="visibility" begin="66.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="69.5s" dur="1.5s" fill="freeze" from="0,133.0,133.0" repeatCount="1" to="45,133.0,133.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#kite_p2">
+    <set attributeName="visibility" begin="66.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="69.5s" dur="1.5s" fill="freeze" from="0,133.0,133.0" repeatCount="1" to="-45,133.0,133.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#kite_p1">
+    <set attributeName="visibility" begin="66.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="67.0s" dur="1.5s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="-45,266.0,266.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#kite_p2">
+    <set attributeName="visibility" begin="66.5s" to="visible"/>
+    <animateTransform attributeName="transform" begin="67.0s" dur="1.5s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="45,266.0,266.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif">
+    <set attributeName="visibility" begin="73.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="74.0s" dur="6.0s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="270,266.0,266.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif">
+    <set attributeName="visibility" begin="73.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="74.0s" dur="4.0s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="180,266.0,266.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif">
+    <set attributeName="visibility" begin="73.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="74.0s" dur="2.0s" fill="freeze" from="0,266.0,266.0" repeatCount="1" to="90,266.0,266.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif_set_1">
+    <set attributeName="visibility" begin="81.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="81.5s" dur="6.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="270,399.0,399.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif_set_1">
+    <set attributeName="visibility" begin="81.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="81.5s" dur="4.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="180,399.0,399.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif_set_1">
+    <set attributeName="visibility" begin="81.0s" to="visible"/>
+    <animateTransform attributeName="transform" begin="81.5s" dur="2.0s" fill="freeze" from="0,399.0,399.0" repeatCount="1" to="90,399.0,399.0" type="rotate"/>
+  </use>
+  <use visibility="hidden" xlink:href="#big_square">
+    <set attributeName="visibility" begin="88.5s" to="visible"/>
+  </use>
+  <use visibility="hidden" xlink:href="#motif_123">
+    <set attributeName="visibility" begin="72.0s" to="visible"/>
+  </use>
+  <use visibility="hidden" xlink:href="#grid_lines">
+    <set attributeName="visibility" begin="56.5s" to="visible"/>
+    <set attributeName="visibility" begin="72.5s" to="hidden"/>
+  </use>
+</svg>
