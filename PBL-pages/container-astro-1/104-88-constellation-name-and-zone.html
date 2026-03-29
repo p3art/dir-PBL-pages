@@ -1,0 +1,801 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>104-88-constellation-name-and-zone</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="328188db-8a4e-8101-91ff-f4b842710b24" class="page sans"><header><h1 class="page-title" dir="auto">104-88-constellation-name-and-zone</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="32a188db-8a4e-8086-a8e8-eb7a5f59cb01" class="">88 星座名稱及圖形</p></div><div style="display:contents" dir="auto"><h2 id="328188db-8a4e-8170-a30c-c9db8a461231" class="">by <strong>Mathematica</strong> demo program</h2></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8120-81bf-c34f9dc0aedc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f3-aa45-e8ac9b5f1878" class=""><mark class="highlight-blue"><mark class="highlight-teal_background">       ShortName</mark></mark><mark class="highlight-teal_background">	        <br/>ith            </mark><mark class="highlight-red"><mark class="highlight-teal_background">Chinese Name</mark></mark><mark class="highlight-teal_background"> </mark></p></div><div style="display:contents" dir="auto"><hr id="328188db-8a4e-815a-b7f0-ed12e2b40b8e"/></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f1-a316-e425d673e5cc" class="">01	And	仙女座<br/>02	Ant	唧筒座<br/>03	Aps	天燕座<br/>04	Aqr	寶瓶座<br/>05	Aql	天鷹座<br/>06	Ara	天壇座<br/>07	Ari	白羊座<br/>08	Aur	御夫座<br/>09	Boo	牧夫座<br/>10	Cae	雕具座<br/>11	Cam	鹿豹座<br/>12	Cnc	巨蟹座<br/>13	CVn	獵犬座<br/>14	CMa	大犬座<br/>15	CMi	小犬座<br/>16	Cap	摩羯座<br/>17	Car	船底座<br/>18	Cas	仙后座<br/>19	Cen	半人馬座<br/>20	Cep	仙王座<br/>21	Cet	鯨魚座<br/>22	Cha	蝘蜓座<br/>23	Cir	圓規座<br/>24	Col	天鴿座<br/>25	Com后髮座<br/>26	CrA	南冕座<br/>27	CrB	北冕座<br/>28	Crv	烏鴉座<br/>29	Crt	巨爵座<br/>30	Cru	南十字座<br/>31	Cyg	天鵝座<br/>32	Del	海豚座<br/>33	Dor	劍魚座<br/>34	Dra	天龍座<br/>35	Equ	小馬座<br/>36	Eri	波江座<br/>37	For	天爐座<br/>38	Gem雙子座<br/>39	Gru	天鶴座<br/>40	Her	武仙座<br/>41	Hor	時鐘座<br/>42	Hya	長蛇座<br/>43	Hyi	水蛇座<br/>44	Ind	印第安座<br/>45	Lac	蝎虎座<br/>46	Leo	獅子座<br/>47	LMi	小獅座<br/>48	Lep	天兔座<br/>49	Lib	天秤座<br/>50	Lup	豺狼座<br/>51	Lyn	天貓座<br/>52	Lyr	天琴座<br/>53	Men	山案座<br/>54	Mic	顯微鏡座<br/>55	Mon	麒麟座<br/>56	Mus	蒼蠅座<br/>57	Nor	矩尺座<br/>58	Oct	南極座<br/>59	Oph	蛇夫座<br/>60	Ori	獵戶座<br/>61	Pav	孔雀座<br/>62	Peg	飛馬座<br/>63	Per	英仙座<br/>64	Phe	鳳凰座<br/>65	Pic	繪架座<br/>66	Psc	雙魚座<br/>67	PsA	南魚座<br/>68	Pup	船尾座<br/>69	Pyx	羅盤座<br/>70	Ret	網罟座<br/>71	Sge	天箭座<br/>72	Sgr	人馬座<br/>73	Sco	天蠍座<br/>74	Scl	玉夫座<br/>75	Sct	盾牌座<br/>76	Ser	巨蛇座<br/>77	Sex	六分儀座<br/>78	Tau	金牛座<br/>79	Tel	望遠鏡座<br/>80	Tri	三角座<br/>81	TrA	南三角座<br/>82	Tuc	杜鵑座<br/>83	UMa大熊座<br/>84	UMi	小熊座<br/>85	Vel	船帆座<br/>86	Vir	室女座<br/>87	Vol	飛魚座<br/>88	Vul	狐狸座</p></div><div style="display:contents" dir="auto"><hr id="328188db-8a4e-813d-8b47-c620ae2efea0"/></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81dc-adaa-e4f09e410cb0" class="">01</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8119-8aad-eebe1697a3cf"><div class="source"><a href="104-88-constellation-name-and-zone/01.pdf">attachment:22854e2b-f0cb-47cd-a482-583e23028137:01.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8198-94db-e908337c545e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8183-a66e-f86faa89d1c6" class="">02</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81b2-ba41-dd3da0f0c08e"><div class="source"><a href="104-88-constellation-name-and-zone/02.pdf">attachment:c43b0d45-ef1e-4a4b-9ab2-bb672252dc48:02.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8177-a8f5-dea03e83d0bc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81d7-a1e5-fc644a0644c8" class="">03</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8116-bfb4-c4dfab3ec5ad"><div class="source"><a href="104-88-constellation-name-and-zone/03.pdf">attachment:4d1f40d5-ed26-4403-b09b-b458c848a265:03.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81a1-8af8-e450e9ace59f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8191-a68e-fdde167dd9da" class="">04</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-817c-b2d0-f70e0269605f"><div class="source"><a href="104-88-constellation-name-and-zone/04.pdf">attachment:688500d9-5983-46b4-bdb3-339f25457073:04.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f9-aa5f-e37372d5f323" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8141-90ae-e98f33b64d64" class="">05</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81bd-99e1-f438656ab774"><div class="source"><a href="104-88-constellation-name-and-zone/05.pdf">attachment:42615eab-8e62-4eb8-845c-b3e0548ec5c6:05.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8101-b987-d1ed6a0a6007" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815d-8ee0-ec6d72b9506b" class="">06</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8156-aae4-cb154a18b023"><div class="source"><a href="104-88-constellation-name-and-zone/06.pdf">attachment:7865c463-6aa7-4560-bf28-39898c49ad54:06.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8166-982e-cddc752d4d7f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81bb-bc56-c87556c02281" class="">07</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-816e-b06b-efc62492546d"><div class="source"><a href="104-88-constellation-name-and-zone/07.pdf">attachment:8fcea533-2d52-424a-b68a-f5c004eeaceb:07.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8183-be03-eb7fd1a6a3ac" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8187-9ecb-eb473654880f" class="">08</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8126-9d88-d921872154d4"><div class="source"><a href="104-88-constellation-name-and-zone/08.pdf">attachment:60fbc89e-f912-49d7-b795-4d620e42ad27:08.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8123-80af-df2938d625f7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8198-a9cc-d10f0793c5fc" class="">09</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8126-911a-de8c5cb3be46"><div class="source"><a href="104-88-constellation-name-and-zone/09.pdf">attachment:67993d3b-4270-46e6-8327-6929c40fe8cd:09.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-812d-bcc7-c46608e446d9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-818f-89ba-c8aadae1f1e2" class="">10</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81d4-857a-ef8c8da9c24b"><div class="source"><a href="104-88-constellation-name-and-zone/10.pdf">attachment:c45f972e-e8e0-4815-8c7e-309d44790554:10.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-813c-b8b1-c5d94c76e881" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8133-836b-e894697e5aa3" class="">11</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8184-930e-fd640962f04c"><div class="source"><a href="104-88-constellation-name-and-zone/11.pdf">attachment:e723f7f0-2ff8-4d0f-815b-d7e26796ca3d:11.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-810d-a476-dbba879fc526" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8177-b434-e752bf35f881" class="">12</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-814f-b4c7-eba98a7cc59a"><div class="source"><a href="104-88-constellation-name-and-zone/12.pdf">attachment:a717548e-8c63-4333-9c30-a107e218ecd5:12.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-816c-9d6d-d573ea59d48f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8196-9f5a-d6388f7f5a12" class="">13</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8117-9254-c2c76d8004d6"><div class="source"><a href="104-88-constellation-name-and-zone/13.pdf">attachment:4cf4c9b6-8d80-42a0-a638-5a5e82104b22:13.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81c4-9060-d5b13d036e93" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81b7-b371-e677cff4f692" class="">14</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-816e-8e3d-d70c72a00541"><div class="source"><a href="104-88-constellation-name-and-zone/14.pdf">attachment:0d66cb83-9a97-4d6b-9421-807686be7502:14.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8134-aca4-f9c25c81528e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815d-ac62-f7ec6a12dafb" class="">15</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-812d-81ca-daa5597edc9e"><div class="source"><a href="104-88-constellation-name-and-zone/15.pdf">attachment:8c935290-e334-42a9-a713-efa05d84cd29:15.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81e5-b6b8-fa4dc03f8bd0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81fc-aaea-dc1bab7bd10d" class="">16</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81a1-8f46-d157cc36857f"><div class="source"><a href="104-88-constellation-name-and-zone/16.pdf">attachment:9edc19fa-aa77-40a0-ba4f-41b2783ac5ff:16.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81a1-9872-c455cd8e5d1b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8164-a6ba-e6b25ac7eb8a" class="">17</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-816e-8387-c4b03b4043e8"><div class="source"><a href="104-88-constellation-name-and-zone/17.pdf">attachment:89c0523b-6540-466c-aca1-a2ddcc1b5714:17.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815d-975e-c3f4007eb6ef" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8119-a3bb-efc8a947ce41" class="">18</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8180-945f-df83747c37a1"><div class="source"><a href="104-88-constellation-name-and-zone/18.pdf">attachment:69e2f4cf-12e6-43b8-a78d-700a97c5080b:18.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-816a-af08-d5cbab9f5c3d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8185-84ea-f1f8abea200e" class="">19</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-813e-8e00-ca05820fd4a3"><div class="source"><a href="104-88-constellation-name-and-zone/19.pdf">attachment:842562f3-ed7e-4330-89ad-15d72ab16d07:19.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81cf-afd6-e2b2e7840a92" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8104-a997-ead1436fec80" class="">20</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-812f-bf6c-ce2aede05f9d"><div class="source"><a href="104-88-constellation-name-and-zone/20.pdf">attachment:e8c06955-1062-494b-9ea5-6af69b738ef4:20.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-813f-89c6-c88319aae3f3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81a1-b795-c52a819a96d7" class="">21</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81dd-9e1e-d227cc113736"><div class="source"><a href="104-88-constellation-name-and-zone/21.pdf">attachment:11916cdd-7537-4e90-92ea-04a5914a9759:21.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8186-9af8-c45da5fa810b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8198-9ca8-dfae20d45607" class="">22</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8177-8bc4-c5b82dd44b43"><div class="source"><a href="104-88-constellation-name-and-zone/22.pdf">attachment:16753c12-4034-4ef8-b182-0e8496ba6159:22.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-819c-8a0a-df5fa345a8b6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81e9-85e7-def2d32477ab" class="">23</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8123-8703-ec7227716c99"><div class="source"><a href="104-88-constellation-name-and-zone/23.pdf">attachment:66372c79-3fa3-415a-8121-a011def46ca2:23.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81dc-96ef-cd06dd3b0f55" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8182-97d8-c3e59502fd50" class="">24</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8143-b491-ff51d13d6f6f"><div class="source"><a href="104-88-constellation-name-and-zone/24.pdf">attachment:e0724aa1-458d-4c43-a1cf-38bebb4bfa6e:24.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8111-bba5-e9bb69a15ae3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81da-8df8-eda7bcac4c99" class="">25</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-816a-b6c7-c7979b3ad861"><div class="source"><a href="104-88-constellation-name-and-zone/25.pdf">attachment:2bd6ce2b-51e3-4474-ad8f-48ca7437a56e:25.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-814e-be86-e15470a0d9ee" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f5-bdef-cf3e56f1ae4c" class="">26</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81c6-8464-c011dc0878ae"><div class="source"><a href="104-88-constellation-name-and-zone/26.pdf">attachment:e09a2223-4b12-4d1f-82e9-af80f481266f:26.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8152-862a-f0afb52c255b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81ad-8ed1-c147ae2b44db" class="">27</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-816e-ad2b-cd4b77cbd8c1"><div class="source"><a href="104-88-constellation-name-and-zone/27.pdf">attachment:3814b619-bcf5-4748-97e1-84cebafe4c04:27.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-811e-a683-cc1b44e6164f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81cc-a6e3-cb1ec99dc98d" class="">28</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8143-8f5c-d4e2266839d3"><div class="source"><a href="104-88-constellation-name-and-zone/28.pdf">attachment:82c9f1da-8382-4526-8c6a-fb520cad6f73:28.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8191-9dfc-db797d4f4fc8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8175-960b-d47494155402" class="">29</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-812d-bfaa-ccfce431f578"><div class="source"><a href="104-88-constellation-name-and-zone/29.pdf">attachment:3a6d62d1-edbc-4af0-8129-9b7e532943f4:29.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8186-a073-f642aeff925c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81e1-ac05-f6f87907544f" class="">30</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8146-8f6f-fa92a7d45240"><div class="source"><a href="104-88-constellation-name-and-zone/30.pdf">attachment:30d0c527-4d10-4310-87c3-4a0ec9845d86:30.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81a0-97d7-d898455ccc09" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-816f-9488-e5e93677ea6b" class="">31</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81e1-b19f-ceb7ae4f8d45"><div class="source"><a href="104-88-constellation-name-and-zone/31.pdf">attachment:a8af54e0-b49c-42f8-ab65-389ee513162a:31.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8197-b092-f16f59041adb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8148-ad00-f08334c63850" class="">32</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8124-ba3a-fbd48f2e04d9"><div class="source"><a href="104-88-constellation-name-and-zone/32.pdf">attachment:bdc133d2-51fd-4e64-8190-c1357ea1be3b:32.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8191-ac13-e45180edd25e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8147-9482-c7322b1534a5" class="">33</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81f1-931c-c34d96ee3e6a"><div class="source"><a href="104-88-constellation-name-and-zone/33.pdf">attachment:057dc10d-550f-46d2-8eb2-d9b4f4b51456:33.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8181-9673-f0a4967ae79a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8175-b7ca-d727533bf72a" class="">34</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-810a-9f4c-cac03e31454f"><div class="source"><a href="104-88-constellation-name-and-zone/34.pdf">attachment:6fac1ec0-64f7-411a-a6da-41b5be7ca9e7:34.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81fe-ac22-d40234fa5dc7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81ab-bb4f-e3182a56a40c" class="">35</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-814e-b04b-c814177ceca5"><div class="source"><a href="104-88-constellation-name-and-zone/35.pdf">attachment:d6fe6a01-29e2-4619-9bf8-099ac0f19282:35.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8102-915e-ce10ef01bddb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-817d-8122-dea86d0e53cf" class="">36</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81d8-a5bc-c7e34cf32340"><div class="source"><a href="104-88-constellation-name-and-zone/36.pdf">attachment:e65e04c6-80b9-4525-a9d3-cb5f8b511d92:36.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8112-bf74-c1374fa951d3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81a7-8fb3-fb0b27a728a0" class="">37</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81a0-981c-e05749afb617"><div class="source"><a href="104-88-constellation-name-and-zone/37.pdf">attachment:01a59cc8-a515-4b52-89c3-53118ef65edf:37.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-817d-8960-f493eba29464" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8132-bc3f-ee4af8693284" class="">38</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81f5-a843-fa97aa29035e"><div class="source"><a href="104-88-constellation-name-and-zone/38.pdf">attachment:6ce39c2d-6869-4f18-9682-5de74f6518d2:38.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81a2-81c6-e6da24fb4aaf" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f2-8b4d-f8f3f75ad5da" class="">39</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8182-b7dd-f766647d591f"><div class="source"><a href="104-88-constellation-name-and-zone/39.pdf">attachment:c8256f0c-5ee3-4961-a6e8-82ef15a65b8a:39.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81d3-8254-c6f01bdb2669" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8149-9d03-fcd0afcc21c6" class="">40</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81f3-b02b-e6dffe70d76a"><div class="source"><a href="104-88-constellation-name-and-zone/40.pdf">attachment:a6e80247-d2b3-4b3f-9fce-2f296bdee756:40.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81fc-9a57-dc601559a609" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81bb-a529-ede27e62a788" class="">41</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-818f-b25a-e96eefa4faa9"><div class="source"><a href="104-88-constellation-name-and-zone/41.pdf">attachment:aec4e3aa-7941-4da8-90c7-19889bace39f:41.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8112-b27d-fa0fd6e84c50" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-819e-9d3c-e0df62c57d5f" class="">42</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8128-b687-cd57bdf956f4"><div class="source"><a href="104-88-constellation-name-and-zone/42.pdf">attachment:8dbf7520-d815-4498-8bdf-908a6f19998d:42.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-817f-a3c2-cf0f7cb58913" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8186-bfe4-e640a8aed5eb" class="">43</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81d0-ad65-f404fc34b2ba"><div class="source"><a href="104-88-constellation-name-and-zone/43.pdf">attachment:50b46468-5f44-48c1-b2f3-2bcbe6111fcc:43.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815c-bdc0-c4f90ce67dfa" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81b5-b808-c11fb408ed0a" class="">44</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-810d-aea8-f2f7f0e78320"><div class="source"><a href="104-88-constellation-name-and-zone/44.pdf">attachment:3824a7a4-549b-4281-ae09-9038326d3815:44.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8179-92ec-f691305791ee" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81d8-bce4-d9cb590e73db" class="">45</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-811f-a928-d7a18a2d78da"><div class="source"><a href="104-88-constellation-name-and-zone/45.pdf">attachment:c96f793f-fdc6-4967-acaf-e8d2fc52468f:45.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-816e-85bb-f4b3dd82b7fd" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8163-8012-e7936a179a34" class="">46</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81e9-9417-cc9fc630cb06"><div class="source"><a href="104-88-constellation-name-and-zone/46.pdf">attachment:f4b4f903-33de-440a-8eff-e89318ecb23b:46.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815c-9564-f79aa0cea723" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-814b-8033-ee916bafe130" class="">47</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-813b-9593-d60639220bff"><div class="source"><a href="104-88-constellation-name-and-zone/47.pdf">attachment:32bc9a1f-1f8d-4564-b12e-3adee771c2b8:47.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81e8-82b7-fbbf3efe947d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8164-b831-f3b4b713de15" class="">48</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81ae-9c1a-ea5e27084960"><div class="source"><a href="104-88-constellation-name-and-zone/48.pdf">attachment:9f91945d-ab08-478c-afdb-7f904668f82c:48.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8113-a46a-e7a6265706d1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815a-b797-f48609a679fe" class="">49</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8107-a12c-ffbda339b198"><div class="source"><a href="104-88-constellation-name-and-zone/49.pdf">attachment:272e9ad3-7f3d-44b6-a702-dee5c067fe76:49.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8172-a6cb-c364b02e5c0d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8113-ae9a-c4255bc6a395" class="">50</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81ec-bae9-e112f642a18d"><div class="source"><a href="104-88-constellation-name-and-zone/50.pdf">attachment:7a231103-8544-43ff-b537-9a0406ac7416:50.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81aa-900a-c669875be62d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-817c-98a2-f96fe73b413d" class="">51</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81a8-b0d6-c90d32da905a"><div class="source"><a href="104-88-constellation-name-and-zone/51.pdf">attachment:8fd4b78d-a2df-4ff7-84d4-d842b3d963f2:51.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-811f-af5a-e654215d3aeb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f4-b214-f4e50dd16171" class="">52</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8144-a8b0-e1efa7f576d7"><div class="source"><a href="104-88-constellation-name-and-zone/52.pdf">attachment:318ff3f2-678a-4356-855e-8a2e49bb0283:52.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8141-b309-f817633eac62" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81b0-86cd-cd6b37e0ff30" class="">53</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-817d-a4aa-f17f02421c2d"><div class="source"><a href="104-88-constellation-name-and-zone/53.pdf">attachment:2ee3d061-4bc9-4b67-bc65-a4e7ddf35edd:53.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8131-b035-e523e5473d36" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8105-88b9-d25c0f79d1da" class="">54</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8110-8158-c40b5b40c818"><div class="source"><a href="104-88-constellation-name-and-zone/54.pdf">attachment:e3a6850f-c78a-4338-9f5c-6b9c5ea7a0f3:54.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815a-9d46-fdee6c4a0703" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-818d-bca3-cba3f7306cda" class="">55</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8191-b5c1-d12c54fe57da"><div class="source"><a href="104-88-constellation-name-and-zone/55.pdf">attachment:3d85a072-5bd2-4344-9c46-c413988dbfd1:55.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8199-9489-cce84c4502cd" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81b2-894f-c90bc279789c" class="">56</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81ed-ba7c-d5519db922fb"><div class="source"><a href="104-88-constellation-name-and-zone/56.pdf">attachment:afade192-6c9f-4b37-8d64-66a2e27c360f:56.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8187-97ff-c683fc3dfa4a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8105-8908-d2c2235cb070" class="">57</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8137-aa71-c53156b88ca8"><div class="source"><a href="104-88-constellation-name-and-zone/57.pdf">attachment:29f63977-bb10-49e9-b0b3-3bbc9d044274:57.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-817c-89ab-d661b6340e44" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8123-8e27-f6950c4edf6a" class="">58</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-815a-b221-f2a9352c2a93"><div class="source"><a href="104-88-constellation-name-and-zone/58.pdf">attachment:19b07bb6-a5ad-4f81-8271-145cb644c44b:58.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815c-9cfc-f787b7259185" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8139-bb85-fe1fb0e1db11" class="">59</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8178-8466-f54954dd3655"><div class="source"><a href="104-88-constellation-name-and-zone/59.pdf">attachment:0c9da9f6-fac0-405e-bdb2-1380049cf810:59.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8103-9a4e-d3eea630a550" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8198-a60a-ffdf30e8f09e" class="">60</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8113-b949-e1b3627c3ebe"><div class="source"><a href="104-88-constellation-name-and-zone/60.pdf">attachment:90ff032f-1804-43f2-a733-54d6ddd32f3c:60.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-814c-bbe2-c13bb7dcc7b5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-818f-a356-c5c84add998a" class="">61</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8101-a391-f3ed0ca91559"><div class="source"><a href="104-88-constellation-name-and-zone/61.pdf">attachment:760b92ed-d85e-48b5-8704-0ad98a93da83:61.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8109-8e93-dfdbbfbc18e7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8132-be13-d3e34e4c5128" class="">62</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8180-b216-d27af04d690a"><div class="source"><a href="104-88-constellation-name-and-zone/62.pdf">attachment:a57645d8-0f8a-40f5-a008-d48d938bd23c:62.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81c8-9b27-f8c2bcad18a5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81f9-b76b-fc78de661f33" class="">63</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-810f-8ce0-e0d691235898"><div class="source"><a href="104-88-constellation-name-and-zone/63.pdf">attachment:808861d8-ba29-4e82-861b-a760898494e6:63.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8194-b501-c7df1ee37dc6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81df-8ac3-ffc6e43103c9" class="">64</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8157-8493-f2362d793cf1"><div class="source"><a href="104-88-constellation-name-and-zone/64.pdf">attachment:ca4604a9-dabe-4593-99e2-ad9138076ae4:64.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8189-86f7-df667f2a5459" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8164-b4cf-e5bd948dc123" class="">65</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8179-b92c-cd628144a55c"><div class="source"><a href="104-88-constellation-name-and-zone/65.pdf">attachment:2d607930-ebe9-4d7f-aad3-55a2e7a0e534:65.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81c5-857c-de97f44f27b1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-810b-a922-f11e18658309" class="">66</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-817b-99c1-e04c8cf62ec1"><div class="source"><a href="104-88-constellation-name-and-zone/66.pdf">attachment:82f5e41a-4c83-4215-8ae7-df67c85c397c:66.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8132-953e-f08f8a79efbc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81d6-8a4b-f91e449e40a5" class="">67</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81fb-9521-f996828025d9"><div class="source"><a href="104-88-constellation-name-and-zone/67.pdf">attachment:86bfded6-4890-416d-abb4-e8e73552f3e0:67.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-814d-be4d-f6c08fa8480b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8193-a432-f07e58f14acd" class="">68</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8170-ba27-d03c0052128a"><div class="source"><a href="104-88-constellation-name-and-zone/68.pdf">attachment:e721f529-685a-4d45-8262-663958e61895:68.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-813d-906c-efcb443438ee" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81cf-ae4f-ea96b674b506" class="">69</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81e6-b348-f6c17bd1af7a"><div class="source"><a href="104-88-constellation-name-and-zone/69.pdf">attachment:715dcb21-6652-4ba6-871c-2835d5f2bab1:69.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-810a-a94c-d7f53e8db882" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8100-b140-ccf876859901" class="">70</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81db-a95f-df70732c78ba"><div class="source"><a href="104-88-constellation-name-and-zone/70.pdf">attachment:2d6cb974-5b29-4c59-8c9e-792dee6a4a64:70.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8111-8800-e466853a6d95" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-817b-af51-d3256dbbfe83" class="">71</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81f8-8053-d694d8f07981"><div class="source"><a href="104-88-constellation-name-and-zone/71.pdf">attachment:f46ba3a6-f54d-41d8-9d95-b8283df31e6d:71.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-819b-a839-f7345f44ef29" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8161-94b8-fb1bfa038784" class="">72</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81e5-a366-e801def0c586"><div class="source"><a href="104-88-constellation-name-and-zone/72.pdf">attachment:f8fe7a4c-e3e6-4120-8166-eb4f8bece808:72.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-811b-9bba-d6a9861ddf24" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-811a-a778-ec51203dafe4" class="">73</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-811a-8057-eccedf9756a3"><div class="source"><a href="104-88-constellation-name-and-zone/73.pdf">attachment:c7d3e0ec-5d23-4bc6-ba7b-07ace342c77a:73.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815b-9221-d5d4c029600e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81ef-a957-d151b5140881" class="">74</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8167-a5fc-f960efaa8980"><div class="source"><a href="104-88-constellation-name-and-zone/74.pdf">attachment:05e17ede-212b-468e-8065-c8c12acf6ae0:74.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8158-9584-f318267404aa" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8106-a307-f6804a1747a8" class="">75</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-819e-89a3-f252e461150d"><div class="source"><a href="104-88-constellation-name-and-zone/75.pdf">attachment:53a5d9e3-aeb8-4311-ae69-45d82257f90b:75.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-814a-8a04-f4d1225f3e2c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8165-9f00-c5f68e25fc87" class="">76</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-817a-b5fc-de8df61deb85"><div class="source"><a href="104-88-constellation-name-and-zone/76.pdf">attachment:b9573901-1ac8-4d73-8425-000847897ca6:76.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8126-abd6-d955745e0b85" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8144-b395-da88cc943ca7" class="">77</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8135-a61a-c497a87582e4"><div class="source"><a href="104-88-constellation-name-and-zone/77.pdf">attachment:5d928283-2a76-47a5-8796-fefe689f9a3c:77.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8126-a503-d480f246943e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81b1-ba95-fcff6d5eec05" class="">78</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8191-a8de-f2db5a705d0b"><div class="source"><a href="104-88-constellation-name-and-zone/78.pdf">attachment:fb4d1a11-e4aa-491d-b577-cc73727bb99f:78.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-813e-a294-f8cf6ddd3166" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8136-8c1e-cbc725cc0abf" class="">79</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81cc-bc2a-e4f438c29493"><div class="source"><a href="104-88-constellation-name-and-zone/79.pdf">attachment:c569b561-8ad9-44d7-9a02-ad99554cd038:79.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-813a-8c09-d29462001be5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81ae-81a0-f2d072ce49d0" class="">80</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81eb-93a7-c47f328ef296"><div class="source"><a href="104-88-constellation-name-and-zone/80.pdf">attachment:df4a99f6-5741-43e3-bb04-291d018a98b6:80.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-818a-a403-edd096473daf" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8184-9b34-fca81f071ebc" class="">81</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8157-8470-c65d5e899dcb"><div class="source"><a href="104-88-constellation-name-and-zone/81.pdf">attachment:71258592-8533-45e9-8c9e-69e6a41e3652:81.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8183-9226-f80b39208a1d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8150-9c52-ff11d4bd3d99" class="">82</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81e0-9723-e9270b04dd6f"><div class="source"><a href="104-88-constellation-name-and-zone/82.pdf">attachment:0b3899be-0e0e-483f-a6a1-adc1aeaf6b77:82.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81fd-b9e3-ec24e078e006" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-81d0-90e3-c87f0cc28b84" class="">83</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8196-aa45-ddde9d332245"><div class="source"><a href="104-88-constellation-name-and-zone/83.pdf">attachment:25c0c1fe-b598-4c0c-852f-c4cfd1229d10:83.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8144-8c0a-f8c285b54c60" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8170-9f0b-ef579add888a" class="">84</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81de-97d9-d029cffaa1b5"><div class="source"><a href="104-88-constellation-name-and-zone/84.pdf">attachment:dbe354ad-741d-4772-bbb2-4aecbf47f986:84.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-814d-8ddb-edc6a018346f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8120-9cda-ff45902ef30e" class="">85</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8196-8e92-cad8b8e2ee5d"><div class="source"><a href="104-88-constellation-name-and-zone/85.pdf">attachment:747548f6-8d73-4c82-85d9-4cb285214b85:85.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815a-88a4-fe7eb52c0ef3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-813b-8b70-d42d5a5fc384" class="">86</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-813f-8e39-d28b71f8a7e6"><div class="source"><a href="104-88-constellation-name-and-zone/86.pdf">attachment:3d988600-39c3-4e76-9e5a-8206222fc90f:86.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8157-957e-ef357fcaac02" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8192-bfc3-c8ece3dc7983" class="">87</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-81ba-821f-f194acc30a12"><div class="source"><a href="104-88-constellation-name-and-zone/87.pdf">attachment:20ecc221-8800-4035-938d-357df1f4b7ef:87.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8100-bb73-d3eeee362463" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8107-bbbd-ce1453a58213" class="">88</p></div><div style="display:contents" dir="ltr"><figure id="328188db-8a4e-8119-8529-f86bfd6ffd3c"><div class="source"><a href="104-88-constellation-name-and-zone/88.pdf">attachment:aae3e22d-f0e4-400d-a10e-f4128b81c491:88.pdf</a></div></figure></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-8181-b3b6-d556cfeeb78d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-815b-bc59-f147e14e2116" class="">
+</p></div><div style="display:contents" dir="auto"><p id="328188db-8a4e-810b-93cd-f3f6abf4f462" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
