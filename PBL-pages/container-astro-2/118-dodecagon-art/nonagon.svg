@@ -1,0 +1,10 @@
+﻿<svg baseProfile="tiny" height="598" version="1.2" width="598" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon fill="white" points="0,0 598,0 598,598 0,598" stroke="blue"/>
+  <polygon fill="rgb(225, 244, 249)" points="14.0,14.0 584.0,14.0 584.0,584.0 14.0,584.0" stroke="none"/>
+  <defs>
+    <g id="Nonagon">
+      <polyline fill="none" points="324.7956,245.2706 273.2044,245.2706 228.525,271.0662 228.525,322.6575 254.3207,367.3368 299.0,393.1325 343.6793,367.3368 369.475,322.6575 369.475,271.0662 324.7956,245.2706" stroke="black" stroke-linejoin="bevel" stroke-width="1.0"/>
+    </g>
+  </defs>
+  <use xlink:href="#Nonagon"/>
+</svg>
