@@ -1,0 +1,710 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>用Python繪製星座圖 (北天區)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="32a188db-8a4e-81ad-b61a-ed7d6917657b" class="page sans"><header><h1 class="page-title" dir="auto">用Python繪製星座圖 (北天區)</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="32a188db-8a4e-8102-865a-c3da3860dc67" class=""><strong>高一下學期課程規劃表</strong></p></div><div style="display:contents" dir="ltr"><table id="32a188db-8a4e-8149-8be3-d67e1edadb8b" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-814a-85cd-eec0e6b531cb"><td id="f`IH" class=""><strong>高雄市立中山高級中學 用Python繪製星座圖(天文數據可視化) 課程規畫表</strong></td><td id="@`XE" class=""></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8168-83c4-e0080a14cbdd"><td id="f`IH" class=""><strong>課程名稱</strong></td><td id="@`XE" class=""><strong>用Python繪製星座圖</strong><br/><strong>(天文數據可視化)</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""><strong>課程類別</strong></td><td id="WRPe" class=""><strong>■自強班探究實作課程</strong></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81e9-b2a7-f86264ba6081"><td id="f`IH" class=""><strong>課程說明</strong></td><td id="@`XE" class=""><strong>讓學生從課程中學習數學、天文及運算思維，並以Python程式繪製星座圖，體驗從數據到圖形的奇妙旅程。(下學期繪製北天區)</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81b8-9f6a-e470d3ebdcb8"><td id="f`IH" class=""><strong>實際<br/>授課對象</strong></td><td id="@`XE" class=""><strong>高一學生</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81f0-9e99-e94b9c42dc11"><td id="f`IH" class=""><strong>任課老師</strong></td><td id="@`XE" class=""><strong>林家齊(羅素君)</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""><strong>課程時數</strong></td><td id="WRPe" class=""></td><td id="G=rN" class=""><strong>每週</strong><strong><span style="border-bottom:0.05em solid">_2_</span></strong><strong>節∕下學期</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81bb-bcb0-d4be699d44a7"><td id="f`IH" class=""><strong>開課年級</strong></td><td id="@`XE" class=""><strong>■一年級□二年級□三年級</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""><strong>每班修課人數</strong></td><td id="WRPe" class=""></td><td id="G=rN" class=""><strong>15人</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8123-84ac-f3912edebefa"><td id="f`IH" class=""><strong>學習目標</strong><br/><strong>(預期成果)</strong></td><td id="@`XE" class="">態度</td><td id="ZvRW" class=""><strong>培養學生的自主學習能力，從課程中學習傾聽、理解與包容他人</strong></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-810b-9ab7-e91911bf119d"><td id="f`IH" class=""></td><td id="@`XE" class="">技能</td><td id="ZvRW" class=""><strong>於repl.it免費雲端平台，使用Web Python3程式繪製星座圖</strong></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-811d-b3c8-f8bfa818f40a"><td id="f`IH" class=""></td><td id="@`XE" class="">認知</td><td id="ZvRW" class=""><strong>體驗及認知中西天文傳統議題，學習尊重不同的民族文化</strong></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8177-b054-cba87f43e824"><td id="f`IH" class=""><strong>與十二年國教課綱對應之核心素養</strong></td><td id="@`XE" class=""><strong>□A-1身心素質與自我精進 ■A-2系統思考與解決問題■A-3規劃執行與創新應變</strong><br/><strong>■B-1符號運用與溝通表達 ■B-2科技資訊與媒體素養 ■B-3藝術涵養與美感素養</strong><br/><strong>□C-1道德實踐與公民意識 ■C-2人際關係與團隊合作 ■C-3多元文化與國際理解</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8102-843a-dc0d21cfcab5"><td id="f`IH" class=""><strong>對應學生圖像之</strong><br/><strong>校本素養指標</strong></td><td id="@`XE" class="">知識力■1-1閱讀理解 ■1-2資訊素養■1-3創作鑑賞■1-4創新作為<br/>誠摯力□2-1良好品德 ■2-2同理尊重■2-3人際關係□2-4 感恩惜福<br/>熱情力■3-1主動參與 ■3-2 團隊合作■3-3解決問題■3-4肯定自我<br/>移轉力■4-1發展潛能 ■4-2移轉應用■4-3多元文化■4-4國際視野</td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8173-b619-f03c7b468ccf"><td id="f`IH" class=""><strong>與大學 18 學群之對應關係</strong></td><td id="@`XE" class=""><strong>■資訊□工程■數理化□醫藥衛生□生命科學□生物資源■地球與環境□建築與設計■藝術□社會與心理□大眾傳播■外語■文史哲■教育□法政□管理□財經■遊憩與運動□其他</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8192-805c-e5115e68926b"><td id="f`IH" class=""><strong>課程架構</strong></td><td id="@`XE" class=""><strong>課程進行方式：</strong><br/><strong>1.系統思考法：系統講解天文定義及數據處理，分成觀察、理解、設計</strong><br/><strong>2.星座圖設計實作：觀賞Youtube短片，體驗程式撰寫，學生設計實作，以電腦繪製星座圖</strong><br/>1. <strong>成果發表：上台展示作品並分享創作心得</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81c9-b5f1-fc4508b2b82a"><td id="f`IH" class=""><strong>與其他課程內涵連繫</strong></td><td id="@`XE" class=""><strong>縱向</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""><strong>1.以STEAM為導向，融合學習天文數理</strong><br/><strong>2.結合高中數學、資訊科技、地球科學，深化專案學習能力</strong></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-815f-a1e4-cba5e57b5c61"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>橫向</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""><strong>1.國文歷史：史記天官書、二十四史之天文志</strong><br/><strong>2.學務處：校慶週展示學生作品，參展創客教育博覽會，小論文</strong></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8184-8db0-ebbb05a38a9f"><td id="f`IH" class=""><strong>教學方法或策略</strong></td><td id="@`XE" class="">1. <strong>觀賞Youtube相關短片 (英語發音[旁白], 英文字幕)</strong><br/>2. <strong>STEAM導向的專案學習 (天文學、數學座標變換、資訊科技、程式設計)</strong><br/>3. <strong>指導學生繪製星座圖，培養實作與解決問題的能力</strong><br/>4. <strong>上台發表，增進學生楷模學習和語言表達能力</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81c3-95cc-dad73cf2811b"><td id="f`IH" class=""><strong>學習</strong><br/><strong>評量</strong></td><td id="@`XE" class="">評量方式（含百分比）</td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""><strong>評量指標（校本素養）</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-817e-aa3d-efef13418fa3"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>1. 課程參與度 30%</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class="">1-1閱讀理解、1-2資訊素養</td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81f8-8e43-cc2bf8337b87"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>2. 程式撰寫 50%</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class="">3-4肯定自我、4-1發展潛能</td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81a9-899a-ee031965a747"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>3. 作品展示 20%</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class="">1-3創作鑑賞、3-3解決問題</td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81f2-8c95-fdd4293c7ee3"><td id="f`IH" class=""><strong>規劃內容</strong></td><td id="@`XE" class=""><strong>週次</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>單元主題</strong></td><td id="tsuS" class=""></td><td id="~k^:" class=""><strong>單元學習內容</strong></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-819a-b0a2-ef1d92f6c86f"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>1</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>課程簡介</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">赤道星圖 vs 北天星圖 (特性分析)</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81da-9202-ef4b14447b9e"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>2</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>背景知識</strong><br/><strong>短片欣賞</strong></td><td id="tsuS" class=""></td><td id="~k^:" class=""><strong>BBC觀星指南 01天空的運行 13m30s ~ 18m40s</strong><strong><a href="http://v.qiye10000.com/v/XNuE1NuhbMDAs.html">http://v.qiye10000.com/v/XNuE1NuhbMDAs.html</a></strong><strong>蓋圖 </strong><strong><a href="http://v.qiye10000.com/v/XMTAeNv3sMDE1.html">http://v.qiye10000.com/v/XMTAeNv3sMDE1.html</a></strong><br/><strong>古蓋天圖</strong><br/><strong><a href="http://v.qiye10000.com/v/XMTQ1ODAyNDqb.html"><span style="border-bottom:0.05em solid">http://v.qiye10000.com/v/XMTQ1ODAyNDqb.html</span></a></strong></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8108-a08f-f656b45eef24"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>3</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>星座的學術研究</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">SFA星圖<br/>香港太空館西洋星圖<br/>IAU 88星座圖鑑<br/>Google Earth 星空<br/>NG終極觀星指南<br/>探索星空PPT(南臺科技大學)<br/>2016天文年鑑(臺北市立天文科學教育館)</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-819e-be9d-c152df520f4b"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>4</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>數學探討</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">赤道座標 轉 極座標 ; 赤道座標 轉 地平座標</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8116-98bf-d4fb178c3d80"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>5</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 1</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">繪製等緯區, 依時角繪製經線</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-813e-8e27-dbe119234b3e"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>6</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 2</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">Python程式撰寫、繪製小熊座</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81c7-a260-eed916e6ed21"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>7</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 3</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">Python程式撰寫、繪製大熊座</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8137-9e05-dc5672d8647e"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>8</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 4</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">Python程式撰寫、繪製仙女座</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-812e-b1fa-ccabd2dab8fe"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>9</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 5</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">北天星圖繪製 (一)</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81e5-abd8-e087928ffbc6"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>10</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 6</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">北天星圖繪製 (二)</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-812d-92b3-d8669b93018a"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>11</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 7</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">冬季六邊形繪製 (一) A4大小</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8132-940a-cbfbff7bf3fe"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>12</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 8</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">冬季六邊形繪製 (二) A4大小</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81fa-af61-d7c72a12c316"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>13</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 9</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">黃道十三星座繪製 (一) B4大小</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81e0-b249-f5ef49a34d63"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>14</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 10</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">黃道十三星座繪製 (二) B4大小</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-815c-9ccc-cb19458b8e43"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>15</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 11</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">Acrobat PDF檔調整星點中西名稱位置</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-8138-b28f-cbf7be319802"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>16</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 12</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">Python程式撰寫、個人星圖 30x30 cm</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81d8-950b-e9018fb31027"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>17</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>實作 13</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">個人星圖、星表製作、PDF後製</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81ec-a99f-dd8f293fd8a9"><td id="f`IH" class=""></td><td id="@`XE" class=""><strong>18</strong></td><td id="ZvRW" class=""></td><td id="ml[}" class=""><strong>成果展示</strong></td><td id="tsuS" class=""></td><td id="~k^:" class="">將個人星圖輸出成PE中空版, 公開展示</td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="32a188db-8a4e-81ef-8d72-c2b31b47a696"><td id="f`IH" class=""><strong>教學</strong><br/><strong>設備需求</strong></td><td id="@`XE" class="">1. 可上網的電腦、chrome瀏覽器(老師及學生一人一機)<br/>2. 影音投影設備<br/>3. 麥克風</td><td id="ZvRW" class=""></td><td id="ml[}" class=""></td><td id="tsuS" class=""></td><td id="~k^:" class=""></td><td id="|cfn" class=""></td><td id="WRPe" class=""></td><td id="G=rN" class=""></td></tr></div></tbody></table></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
