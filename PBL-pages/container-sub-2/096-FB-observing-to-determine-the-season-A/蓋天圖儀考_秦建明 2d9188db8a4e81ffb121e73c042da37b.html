@@ -1,0 +1,710 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>蓋天圖儀考_秦建明</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2d9188db-8a4e-81ff-b121-e73c042da37b" class="page sans"><header><h1 class="page-title" dir="auto">蓋天圖儀考_秦建明</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2d9188db-8a4e-81bf-93e6-ffa096210503" class="">蓋天圖儀考 作者：秦建明<br/> <br/>    蓋天說與渾天說是中國古代天文學兩大主流學派，曆史上，兩派都創造了許多天文儀器，用於觀測、記錄、研究與演示天象。渾天學派之渾天儀與渾象奇瑰雄渾，在曆史上備受推崇，蓋天學派的圭表也廣為世人所知。其實，蓋天派還創制有一種蓋天圖儀，同樣閃爍著先哲智慧的光芒，然而，遺憾地是，這種蓋天圖儀在研究中國古代天文史時卻鮮有提及，幾乎被人淡忘了。<br/>    故本文就此進行探討。<br/>蓋與蓋圖<br/>    蓋天說是中國一種古老的天文理論，傳出自周人之手的《周髀算經》中即曰：「天象蓋笠，地法覆盤」；[1]《晉書．天文志上》引周髀家言：「天圓如張蓋，地方如棋局」，都形象地描述出蓋天理論中的天地模型。蓋天學所說的天，為一覆於大地之上，以北天極為中心的穹形天空。<br/>    相傳蓋天之圖出現在遙遠的黃帝時代，《隋書．天文志上》引晉侍中劉智言：「顓頊造渾儀，黃帝為蓋天」，認為其淵源甚古。《易．系辭上》：「聖人有以見天下之賾而擬諸其形容，象其物，是故謂之象。」又曰：「天垂象，見凶吉，聖人象之。」古人仰則觀象於天，創造出了法象天穹的蓋天儀象。古蓋圖，就是法象這種穹形天空與其上日月星辰的天文圖儀[2]。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<br/>    蓋本是古人遮雨蔽日的日常用品，即後世之傘，如《六韜．勵軍》：「將冬不服裘，夏不操扇，雨不張蓋。」[3]古蓋有多種形式，手持而行者為步蓋，裝於車上為車蓋。從柄的形式可分為直柄之蓋、曲柄之蓋。上飾翠羽，周飾析羽五采流蘇珠絡垂帶等華麗的蓋，名曰「華蓋」；多層相疊的為重蓋，王莽即造有九重華蓋。[4]蓋的資料考古中發現的也非常豐富。<br/>    古人於傘蓋之下，仰觀其形有若天穹，如在其上繪制星辰圖象以效法天空，就成為一幅穹形的天象圖，這種天象圖就是蓋圖。所以真正的蓋圖，是繪寫於穹形傘蓋上之星圖，而非後代已經改繪為平面形式的蓋天星圖。如果分而言之，我們可稱前一種為「穹形蓋圖」，後一種為「平面蓋圖」。<br/>    與蓋相類者還有笠，笠無柄，頂戴於頭遮日防雨，其形與蓋相近，故有蓋笠一詞。《周髀算經》卷上：「笠以寫天。」趙爽注曰：「笠亦如蓋，其是正圓，戴之所以象天。」[5]用笠制作法天之器，寫繪星辰，作用與蓋圖相同。但笠小蓋大，蓋上可以繪上更多的星辰，這大約是後代多稱蓋天的原因之一。<br/> <br/>蓋圖的結構內容與影響<br/> <br/>    蓋圖作為中國古代的一種天文圖儀，其主要用於天文研究，同時也具有記錄與演示天象的功能。除此而外，還被作為實現法天思想的主要象征工具，其在後一方面對中國古代文化影響之深，遠過渾儀。<br/>    關於蓋天圖最重要的內容記載在《隋書．天文志》中，「昔之聖王，正曆明時，作圓蓋以圖列宿，極在其中，回之以觀天象。分三百六十五度四分度之一，以定日數。日行於星紀，轉回右行，故圓規之，以為日行道。欲明其四時所在，故於春也，則以青為道；於夏也，則以赤為道；於秋也，則以白為道；於冬也，則以黑為道。四季之末，各十八日，則以黃為道。」記述了蓋圖的內容與運用方法。晉人劉智《論天》亦曰：「昔者，聖王正曆明時，作圓蓋以圖列宿，極在其中，回之以觀天象。」[6]<br/>    以傘蓋為圖寫星象的儀器主要是取其形與天穹相似，人處其下，上仰而觀，同時還可以回轉蓋圖仿照天穹與天空星辰旋轉，可以斜置演示北天極傾斜的狀態，即簡單，又直觀，可謂古人法天最理想之儀器。這種蓋圖，因是蓋笠形，與天穹形狀相近，故其天區星度布局比較均勻，完全不似後來的平面蓋圖與實際天象的誤差那麼大。但古時完備的蓋圖並沒有傳下來，我們只能就與其相近的車蓋等探討蓋圖形制。<br/>    秦始皇陵所出一號銅車之蓋即類於一簡化蓋圖。該車為仿真車二分之一大小的銅質立車模型。《考工記．車人》曰：「軫之方也，以象地也，蓋之圓也，以象天也」。一號銅車之車輿為方形，車蓋為穹形，蓋內有一銅環，將全蓋分為內外兩區，外區又可據其上色彩不同分為二區，共成三區，三區間距大致等分且塗有不同顏色，中心部分為白色，應當就是法象蓋圖的內中外三官，蓋內二道環一法天文圖之內規，一法中規，蓋的外緣則法外規。只是其蓋上僅二十二弓，蓋內並未繪星宿，而是繪著圖案，大約這不是帝王主車之因（圖一：一號車車蓋內部）。<br/>    按中國古代傳統，西方主秋，為白虎之象，色尚白，秦始皇陵同出二車的服馬驂馬皆白色，為駟馬之車，車又正好出土於秦陵之西，應當屬於蔡邕所說的帝王五時副車中的秋車。真正的黃屋左纛金根車也許埋葬於陵墓的中心地域或正門一帶，當駕六馬，其蓋上面才可能繪有天象。雖然一號車車蓋所繪不是真正的蓋圖，但它已經顯露出古蓋圖的一些基本結構，因而彌足珍貴。<br/>    《晉書．輿服志》說帝王路車皆張「青蓋，黃為裏，謂之黃屋。」《隋書．禮儀五》記有一輛南齊帝車：「及平齊，得其輿輅，藏於中府。……有乾象輦，羽葆圓蓋，畫日月五星，二十八宿，天街雲罕，山林奇怪及遊麟飛鳳，朱雀玄武，騶虞青龍。」 乾象即天象，這輛車之車蓋畫日月五星，二十八宿天街雲罕等天象，正是古蓋圖之形制。至於山林奇怪及遊麟飛鳳，朱雀玄武，騶虞青龍等應是繪於車輿上的圖畫。<br/>    《隋書．禮儀五》詔由楊素等討論車制：其中帝王「玉輅……上蓋如規象天，二十八橑象列星，下方輿象地，三十輻象一月。前視則睹鑾和之聲，側觀則睹四時之運。」與此相類。<br/>    前述上繪有日月五星，二十八宿之車蓋，已經接近真正的蓋圖。但是，它們畢竟只是車蓋，不是一件真正天文上應用的蓋圖，推測其上星數不會很多，且蓋弓勻布，與天文上二十八宿距度不等有別。<br/>    蓋天學者特別強調「天之形如倚蓋」[7]，即天極是傾斜的。古有曲蓋，即蓋之杠不用直柄，而用曲柄。《晉書．輿服志》記漢代帝王出行大駕鹵薄中即有曲蓋一項。《隋書．禮儀四》記南朝梁大朝之禮：「皇帝……乘輿以出，……黃門侍郎一人，執曲直華蓋從。」又《晉書．馬隆傳》：「其假節宣威將軍，加赤幢，曲蓋，鼓吹。」崔豹《古今注》以為是「武王伐紂。大風折蓋，太公因折蓋之形而制曲蓋。」[8]曲蓋之設的用意，一是人在傘蓋下可以不受直柄影響而居於傘的正中位置，其二大約就是法象天極傾斜。<br/>    另一類蓋圖描繪於古墓葬中，如秦始皇陵。漢至隋唐的許多重要陵墓，墓室內設為穹頂，上繪天象，更是屢見不鮮。但發現者多數比較粗略。<br/>完備的蓋圖是在穹蓋上繪有紫微垣、二十八宿與天上眾星、河漢，並有內中外三規、二十八宿距度線與黃道的天文圖。<br/>    蓋上所繪星象皆為恒星，位置相對固定，而日月與金木水火土五星是運動的天體，在蓋圖中難以定位。對於這些運動天體如何表示？這是一個難題，而古作蓋圖者亦有其術，一種方法是繪出其運動的軌跡，如日行黃道與月道等。<br/>但或許還存在第二種方式，我們注意到古帝王除用蓋天之傘法天外，還有日月交扇日月旗之類的儀仗，表示天運[9]。崔豹《古今注》中還提到一種舜所創的「五明扇」[10]，形制不詳，也許是表示五星的扇。我推測蓋圖演天象時可用一帶柄之扇狀輔助工具，上繪一天體，如太陽，在蓋圖上表現其位置與運行狀況。王充在《論衡》中就曾提到傘上綴珠，以法日月之運。<br/>    平面蓋圖，則將蓋圖平面化了，其形因上有二十八宿距度線與內外規而與車輪相似，距度線即古人所說如「車輻」者。將球面圖形平面化之後，必然造成所繪星位照顧角度而犧牲距離，這就產生星圖與實際觀測到的天象不合，因此受到攻擊蓋天說者的詬病，批評蓋圖外規處星稀，中央星稠。這些批評其實並不公正，因為古代穹形立體形式的蓋圖並無此弊。其次要將立體星象化為平面圖，不論渾天與蓋天，古今中外，表現之困難是一樣的。近現代發明的各種投影法就是針對此類問題而生。後來中國出現的「橫圖」，亦是為解決這一問題設計的星圖。直到今天，一般的星圖也還采用天極區一圖，中間球帶部分展為橫圖的表現形式。<br/>    其實，在表現天穹與其上的星象時，渾天儀器也極為吃力，如渾象上繪出的星圖其實是目視星空的反象，相當於人從天外向下俯視的圖，從這一點說，它還，不如蓋圖直觀形象。為克服渾象此弊，宋代曾制一渾天象，造一大空心球，鑽孔代星，內暗外明，人入球內觀察，但此種結構的儀器有諸多不便之處。其次，古渾天派制作渾象時對表現運動天體也頗感頭痛，有時在渾象外增設環，上穿小珠移動，顯示日月五星運行。<br/>    公允地說：蓋以仰視，渾以俯察，兩者各具其妙。<br/>    蓋圖對中國古代法天思想影響甚大，曆代的天壇，多法蓋圖，如隋唐南郊所設天壇，近年已被發掘。據文獻記載，天壇上按照內官中官外官安置眾星辰。天壇中心有一高出地表的圓壇，壇外圍有二重圓牆，法象內中外三規。中壇代表紫微垣與中官，平面圓形，層層收縮，中央最高，可以視天壇為供祭祀所用的階式蓋天模型。唐代天壇與此相類[11]。法天建築的房頂，如古明堂，北京天壇祈年殿之類通常建為圓蓋形。古塔頂部刹上的層層相輪，實為重蓋，系法象九重天。著名唐二十八宿銅鏡大約也代表蓋圖。蓋天圖本是一種天文圖，但在古時，卻與蓋相配，被賦與一種禮制內容，並成為等級身份的標志。<br/>秦漢帝王公侯至各級官吏所用車蓋有種種規定，其不但有色彩上的限制，還有材料與繪飾之區別。帝王的車蓋外青內黃，含法天之意，是最高等級的蓋。《後漢書．輿服志上》說帝車：「乘輿、金根、安車、立車、……羽蓋花蚤。」徐廣注曰：「翠羽蓋黃裏，所謂黃屋車也。金華施橑末，有二十八枚，即蓋弓也。」蓋上羽毛法象飛禽，含有天意；翠青法象天色。太子皇子等級稍低，可用青蓋，但無黃裏。《後漢書．輿服志上》：「皇太子、皇子皆安車，朱班輪，青蓋金華蚤。」 按理其蓋弓之數也有定制，我們懷疑只有帝王大路才能用代表二十八宿的二十八支蓋弓。其它地位低下者，不得用青蓋，自中二千石至二百石以下所乘車上只能施皂色蓋與白布蓋，其蓋「皆有四維、杠衣」。<br/>    《後漢書．輿服志上》曰：「輿方法地，蓋圓象天，三十輻以象日月，蓋弓二十八以象列星。」 注引《白虎通》曰：「居車中，不內顧也。仰即觀天，俯即察地，前聞和鑾之聲，旁見四方之運。」《文子．道原》：「大丈夫……以天為蓋，以地為車。」都是這類以蓋法天觀念。帝王在傘蓋式的天下，以天的化身而居，運四時，布月令，象征代天行道。<br/>    東晉之車制，其上之傘蓋也設「二十八爪支子花」。[12]<br/>    考古中發現的古蓋很多，但出土時多因蓋面與竹木部分朽壞，僅餘蓋弓帽之類的銅構件。其中大部為車蓋，但還有一部分性質不一定是車蓋，可能是其它的蓋甚或是繪有星圖之蓋，值得注意。<br/> <br/>文獻記載與考古中所發現的蓋圖<br/>                 <br/>    蓋圖何時出現邈茫難考，《晉書．天文志》說：「儀象之設，其來遠矣。綿代相傳，史官禁密，學者不睹，」所以文獻較少。從目前所見資料，大約四千年前的夏代就有天文圖了。<br/>    《呂氏春秋．先識》中說：「夏太史令終古，出其圖法，執而泣之。夏桀迷惑，暴亂愈甚，太史令終乃出奔入商。……殷內史向摯見紂之愈迷惑也，於是載其圖法，出亡之周。……晉太史屠黍見晉之亂也，見晉公之驕而無德義也，以其圖法歸周。」[13]太史是世掌天文之官，這裏夏之太史、殷之內史與晉之太史見國家昏亂將亡，皆攜帶「圖法」投奔它國。這種圖法是什麼圖？從太史的職司看，很可能是天文圖。晉太史屠黍到周後與周威公之問答，大致證明了這一推測。「周威公見而問焉，曰：『天下之國孰先亡？』對曰：『晉先亡。』威公問其故，對曰：『臣比在晉也，不敢直言，示晉公以天妖，日月星辰之行多以不當。曰：『是何能為？』」高誘注：「以日月星辰之行多不當其宿度也。」[14]這位太史向晉公指出天上的妖象，日月星辰失度，以暗示危機。這些工作，正是中國古代天文學者研究的核心問題。以此推之，三代之時，太史與內史們所執之圖法，應當就是天文圖，而且最有可能是蓋圖。<br/>    至戰國時期，蓋圖應當已經比較成熟。據《開元占經》與編號Ｐ2512《敦煌寫本》中石氏、甘氏與巫鹹三家星的資料，戰國早期石申曾留下一批精確的二十八宿測量度數（含距度與去極度），並分星宿為中官外官。相當於同期的古書《經法．四度》中也有：「日月星辰之期，四時之度，動靜之位，外內之處，天之稽也。」[15] 分星象為內外官，有度，只有在蓋圖上才能反映。<br/>    《開元占經》還記有一種比之更古老的「古度」出現[16]。這些數據，完全可以據之繪出天文圖。同時，通過觀測夜半中星推定日躔也需要有測量關系的天文圖。隨縣擂鼓墩曾侯乙墓出土的二十八宿漆箱蓋，西漢夏侯灶墓出土的二十八宿圓盤，都可視作簡單結構的蓋圖。秦始皇陵內有天象圖，以玉璧為日月，以珠璣為星辰，推測應當是一幅內容豐富比較精確的穹形蓋圖。西安交大西漢墓所出二十八宿天象圖也是一種蓋圖。《隋書．天文志》記有漢揚雄難蓋天八事，其五曰：「以蓋圖視天河，起斗而東入狼弧間，曲如輪。今視天河中繩，何也？」其八曰：「視蓋橑與車輻間，近杠轂即密，益遠益疏。今北極為天杠轂，二十八宿為天橑輻。以星度度天，南方次地星間當數倍，今交密，何也？」揚雄看到的蓋圖，上繪有銀河，星距有南疏北密的特點，這正是一幅平面蓋圖。<br/>    《漢書．天文志》：「凡天文在圖籍昭昭可知者，經星常宿中外官凡百一十八名，積數七百八十三星。」其所言圖也是星圖。<br/>    張衡之前，漢和帝時典星待詔姚崇等「皆曰星圖有規法，日月實從黃道。」則當時星圖上有規，有日月行道。<br/>    《開元占經．天地名體》引東漢末蔡邕《月令章句》文：「其繞北極徑七十二度，常見不伏，圖內赤小規是也，繞南極徑七十二度，常伏不見，圖外赤大規是也，據天地之中，而察東西，則天半見半不見，圖中赤規截婁角者是也。」蔡氏所說之圖而不言象，應當也是蓋圖，其三規環，繪為赤紅色。<br/>    《晉書．天文志上》：「（晉）武帝時，太史令陳卓總甘、石、巫鹹三家所著星圖，大凡二百八十三官，一千四百六十四星，以為定紀。」當時尚在流傳三家星圖，大約都是蓋圖。<br/>    唐李淳風等撰《隋書．天文志上》：「自開皇以後，天下一統，靈台……以蓋圖列星坐，分黃赤二道，距二十八宿分度。」其另一書《乙巳占．天數》亦曰：「今世供傳星圖者，皆蓋天下圖。」可見隋唐時代應用最廣的依然是蓋圖。<br/>    唐《開元占經》卷一百六至一百十皆題為《星圖》，其中羅列今（唐開元）圖與「舊星圖」及石甘巫鹹三家星異同，有可能舊圖與三家星圖各是一種，則當時尚保存有「舊星圖」與三家星圖。<br/>    隋唐時期大型墓葬常常繪有天象，且繪於穹頂的後室或前室。如永泰公主墓前後室皆為上圓下方法象天圓地方之結構，圓頂上繪有星辰日月與銀河，是一幅穹窿形的蓋天圖，只是該圖比較粗陋而已。這種穹頂上繪制的星圖，有些接近真正的蓋圖。<br/>   《新唐書．天文志》載有詳細的蓋圖繪制方法，其以竹篾作圓，張衡《渾儀圖注》中也用此法，大約是從秦漢以來傳承至隋唐時期之蓋圖作法，該圖為平面圖。<br/>    目前，我們能見到的最規範之古平面蓋圖為宋代所刻蘇州石刻天文圖，現存蘇州博物館。星圖直徑為91．5厘米，外規徑85厘米。內規19．9厘米，是北緯約35度地方的恒顯圈。其內規與外規徑比為0．234。而上文所引《新唐書》中那種蓋圖比值為0．237。兩者結構非常接近，只是比蘇州石刻天文圖多一「月道」，蘇州石刻天文圖應當是中國自古以來相沿的蓋圖繪法。在北京隆福寺正覺殿藻井頂部存有一幅天文圖，有內中外與重規，存星數約1420顆，也是蓋圖。據考證，其系明代所繪,所用底圖或可早至唐代。<br/> <br/>《周髀算經》趙爽注所描述的蓋圖儀<br/> <br/>    《周髀算經》是中國現存最早的古天文學著作，中有關於太陽運行的「七衡圖」。注者趙爽在其下有一段長注，提到了兩種可以結合使用的蓋圖，即青圖畫與黃圖畫。這是一段非常重要的文獻。全部注文如下：<br/>    「青圖畫者，天地合際，人目所遠者也，天至高，地至卑，非合也，人目極觀而天地合也。日入青圖畫內謂之日出，出青圖畫外謂之日入。青圖畫之內外皆天也。北辰正居天之中央。人所謂東西南北者，非有常處，各以日出之處為東，日中為南，日入為西，日沒為北。北辰之下六月見日，六月不見日，從春分至秋分，六月常見日，從秋分至春分，六月常不見日。見日為晝，不見日為夜。所謂一歲者，即北辰之下一晝一夜。<br/>    黃圖畫者，黃道也，二十八宿列焉，日月星辰躔焉。使青圖在上不動，貫其極而轉之，即交矣。我之所在，北辰之南，非天地之中也。我之卯酉，非天地之卯酉。內第一，夏至日道也。中第四，春秋分日道也。外第七，冬至日道也。皆隨黃道，日冬至在牽牛，春分在婁，夏至在東井，秋分在角。冬至從南而北，夏至從北而南，終而複始也。」[17]<br/>    這裏所謂的青圖畫應當是一種特殊蓋圖，這是以觀測者所處地點建立的地平坐標系式蓋圖。圖之中心，即代表觀測者所在地的天頂。既稱之為圖，其上當有所繪內容，推測上繪有子午卯酉等二繩二鉤或十二辰，並有代表天地相合處的外規環之類，其圖底色青[18]。<br/>    而黃圖畫，為另一幅蓋圖，其上列有二十八宿，能貫其極而轉之，其極只能是北天極，是屬於赤道坐標系的星圖。從其文中所說七衡得知，此圖實為加繪有太陽運行七衡環之赤道式蓋天星圖[19]，文中稱之為「黃道也」，與《隋書．天文志》所記繪有五色日道之蓋圖有所不同。其圖之中心，代表北天極，其圖底色黃。所謂內第一、中第四、外第七，指的是七衡圈，說明其上還繪有七衡六間。[20]<br/>    從實際情況與古圖所示，青圖畫之圓徑（天地合際）當小於黃圖畫上外衡之徑。還有一點也值得注意，蓋圖本當為穹形，但《周髀算經》中這青黃二圖卻是用方繒繪星圖，文中說：「凡為此圖，以丈為尺，以尺為寸，以寸為分，分一千裏，凡用繒方八尺一寸。」是平面式的蓋圖。這樣處理，大約是為便於觀察兩蓋相疊運動而設，因為兩個可以相切運轉的穹蓋古人制作起來有相當的難度。<br/>    據其文意，兩圖用法如下。青圖張開置觀測者頭上，以青圖畫之中心正對天頂，旋轉之使其方位（四正四隅等）與東西南北相應後固定不動。青圖代表觀測者可見天區，即「人目極觀而天地合也」的範圍。黃圖畫則貼置於青圖之下，調整令其極處於青圖天極之正北，與當地北極出地高度相應。理想者是黃圖之極在觀測者看來與北天極重合，是為「倚蓋」。一切安排妥當後，就可以運轉演示天象了。<br/>    演示方法如趙爽注文所說：「使青圖在上不動，貫其極而轉之，即交矣。」青圖固定不動，以人力使黃圖以北天極為中心向西緩緩旋轉，透過半透明的黃圖[21]，可以觀察到圖上二十八宿等星象在青圖間的出沒與經過中天之情形。蓋下看到的演示天象與當地實際可見天象類似。黃圖周而複始，代表天運一日。也可以將黃圖定位於某一時刻,進行研究。如果剪一小圓或用一珠代表太陽，貼綴於衡周之上（如夏至時置於內衡，據其日躔宿度選定位置），運轉之還可以研究四季日出入方向與時刻等。<br/>    當然，和太陽一樣，月亮與五星的運行都可以通過該圖演示。<br/>    更重要地是，如果移動位置，即觀測者不在陽城所在緯度，此蓋圖通過調整極高亦可運用。這種演示與渾象之運可謂異曲同工。<br/>    這大約就是中國古代蓋天學派最重要的圖儀。《周髀算經上》所說的「天數之為笠也，青黑為表，丹黃為裏，以象天地之位。」指的應當就是這種有表有裏圖儀。<br/>    《後漢書．輿服上》：「古者諸侯貳車九乘，秦滅九國，兼其車服，故大駕屬車八十一乘，法駕半之。屬車皆皂蓋赤裏。」 蔡邕《獨斷》曰：「黃屋左纛……黃屋者，蓋以黃為裏也。」[22]陳之帝王車制，皆「綠油蓋，黃紋裏。」[23]《隋書．禮儀五》亦記隋帝王車蓋之形制：「玉輅……青蓋黃裏。」<br/>    可證帝王獨享的外青內黃傘蓋，至少是始於秦漢的舊制，應當是由法象青黃圖畫而來。同時，也說明青黃圖畫來源甚古，絕非趙爽首創。與此相近的還有古代占卜用的式盤，有一種大乙式即：「體有三重，上青法天，下黃法地，中赤象人，天地人三才備矣。」[24]<br/>    至此我們還發現，中國古蓋圖，除了常見的赤道坐標系蓋圖外，從趙爽所述青黃圖畫又得知還存在地平式蓋圖。兩種蓋圖配合使用，可以進行高妙的天象演示。地平式蓋圖能記錄固定地點固定時刻的天區星圖，如《堯典》中所說的「日中星鳥」與《月令》中所記某月星象之類。赤道式蓋圖則可以記錄北半球所見全天區之星圖。趙爽所記之蓋天圖儀，與現代星盤的作用比較接近。（圖二：現代簡易星盤。）<br/> <br/>蓋圖的多種運用<br/> <br/>    蓋圖是古天文學家必不可少的天文工具，除演示天象用途外，還可用以尋星、觀象、記錄天象、測算方位距離，計算時辰年月等，現簡介如下。<br/>    蓋圖的一般用法很簡單，首先將圖上舉，仰而視之，旋轉方向，使它和天空中的星座方向一致。然後就可以按圖上星位在天空尋星，從斗極找起最便，找到某星，通過圖上標注即知其星名，同時通過圖上北天極推知地面方向。流傳下來的認星詩歌《玄象詩》與《步天歌》，都標注有三家星色，而天空中的星象是沒有這些星色的，只有圖上才能繪有星色，說明記憶星座時有可能是手持蓋圖對照而為。<br/>    如果北極一帶恰巧為雲為山等遮蔽，看不到常見的定向極星北斗等，便可以使用可見星定向。設天空中發生天象變化，某處出現一彗星，則能在圖上據鄰星位置描繪記錄其方向位置距離，然後在蓋圖上測算其天度或相對尺度。中國古代的《月令》給出計時的中星，是供定時用的。如《呂氏春秋．仲春紀》：「仲春之月，日在奎。昏弧中，旦建星中。」如果記住了這一點，並知當時月份，運用帶二十八宿距度的蓋圖或式盤，對照天上的中星，即可很快算出該地當時的時辰。<br/>    蓋圖還有測算時間長短的玄妙功能。如果記住當地當時晨昏中星，察看現運行至天頂中星為何宿，在蓋圖上找到該宿，與晨昏中星，可算出其間辰差（十二辰一般都標在外規處）；觀看夜半中星，從圖上可量算出處於相沖地位的太陽日躔宿度，知其季節，如果蓋圖上繪有五色黃道，那就更是一目了然。深諳天文者還可以依據天象推出更多的信息，如據當地星高與圖上星高之去極度差計算當地與星圖繪制地間的南北關系等。<br/>    蓋圖除應用於天文研究外，在古代軍事上、建築上用之進行時間測量與地理測量也有一定作用。<br/>    這類技巧，除了古代的天文學者掌握外，一些精於奇門遁甲類的式占家，地理羅經類的陰陽家，對此也深有研究。《史記．日者列傳》記漢初卜者司馬季主閑時就與弟子「辯天地之道，日月之運」，談論「天地之終始，日月星辰之運。」其卜，「必法天地，象四時，順於仁義，分策定卦，旋式正棋。」然後「言天地之利害，事之成敗。」中國古代的式盤及後世的羅盤上都有二十八宿等星度，漢代的許多緯書中也存有天文信息。《孫子兵法．火攻篇》：「發火有時，起火有日。時者，天之燥也；日者，月在箕、壁、翼、軫也，凡此四宿者，風起之日也。[25]」《孫臏兵法．月戰篇》，專講以星以日以月作戰之理[26]。《六韜．龍韜》：「將有股肱羽翼……天文三人，主司星曆，候風氣，推時日，考符驗，校災異，知天心去就之機。」[27]<br/>以上種種活動，必然都要利用到蓋圖。<br/> <br/>結語<br/> <br/>    蓋天學說是中國古代天文學中最重要的一支理論，其不僅理論豐富，同時也有豐富的法象儀器。如回之以法天運的穹形蓋圖；仿北天極傾斜的蓋圖；演示天運與當地可見星空的青黃圖畫，都是極富創造性的珍貴儀象，應當在中國古代天文史上和科技史上占有一席之地。而由此派生出的平面蓋圖，則是中國曆代天文學采用的主要便捷星圖形式，連渾天派也常常利用。研究古人的法象儀器結構手法與變化，對於認識和探討古代科學技術有特殊的作用。渾天派用渾象記錄星圖，比蓋圖有一定優點。但渾象制造複雜，管理嚴格，一般人莫能接近，同時不易攜帶利用，其上的星辰還是反象。而蓋天派的蓋圖則簡便實用，易於攜帶流傳。兩相比較，蓋天圖反有一日之長。因此可以說，蓋圖對促進古天文研究發揮了重要作用。<br/>    中國曆史上曾發生過多次渾蓋之爭，由於渾天說能更好地反映天地的實際，占了主導地位，有了渾儀和渾象，蓋圖受到輕視，在所難免。今天再進行渾蓋之爭當然已經無有意義，如果將蓋天說納入人類認識天文世界的進程中，視其為一個環節，則其依然功不可沒。蓋圖對中國古代濃重的法天意識與法天形式影響之大更是難以否認的現實，所以蓋天圖儀在曆史上曾經產生的作用，也必須給予肯定。（取自《秦建明考古文選》）</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
